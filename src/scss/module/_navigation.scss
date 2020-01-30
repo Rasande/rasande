@@ -1,0 +1,215 @@
+// Navigation
+.navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    padding-bottom: 3em;
+    visibility: hidden;
+    height: 100vh;
+    // Theme
+    background-color: $mobile-menu-bg;
+    color: $mobile-menu-color;
+    font-weight: bold;
+    font-size: 15px;
+    &.open {
+        display: block;
+        visibility: visible;
+        margin-top: $header-height;
+    }
+    .nav-menu {
+        height: 80vh;
+        overflow-y: scroll;
+    }
+
+    .nav-item, .dropdown-item {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .dropdown-item {
+        position: relative;
+        padding-left: 16px;
+    }
+    .nav-link {
+        display: block;
+        flex: 1 0 50%;
+        width: 100%;
+        padding: 1em;
+        white-space: pre;
+        &:hover, &:active {
+            background-color: transparent;
+            color: $menu-link-hover;
+        }
+    }
+
+    .dropdown-menu {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+    }
+
+
+    .dropdown-btn {
+        padding: 15px;
+        font-size: 24px;
+        line-height: 1;
+        color: $dropdown-icon;
+        i {
+            width: 30px;
+            transition: transform .3s ease;
+            transform: rotate(0deg);
+        }
+        &.toggled i {
+            transform: rotate(180deg);
+        }
+    }
+
+    // Desktop menu
+    @include min-lg {
+        position: static;
+        display: flex;
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        visibility: visible;
+        overflow-x: hidden;
+        background-color: transparent;
+        padding-bottom: 0;
+        color: $desktop-menu-color;
+        
+        .nav-menu {
+            display: flex;
+            margin-right: 0;
+            margin-left: 0;
+            overflow-y: hidden;
+            height: 100%;
+            line-height: 1.8;
+        }
+        .nav-item {
+            display: block;
+            margin-left: 1.5em;
+            padding: .25em;
+        }
+        .dropdown-item {
+            display: block;
+            padding-left: 0;
+            padding-top: .25em;
+            padding-bottom: .5em;
+
+        }
+        .nav-link {
+            display: inline-block;
+            flex: 1 0 50%;
+            
+            width: 100%;
+            padding: 0;
+            white-space: pre;
+            &:hover, &:active {
+                background-color: transparent;
+                color: $menu-link-hover;
+            }
+        }
+        .dropdown {
+       
+            &:hover > .dropdown-menu, &:focus-within > .dropdown-menu{
+                display: block;
+                height: auto;
+                opacity: 1;
+                transform: translateY(0);
+            }
+            &:hover::after {
+                position: absolute;
+                top: 40px;
+                right: 0;
+                width: 32px;
+                height: 16px;
+                content: " ";
+                background-color: transparent;
+            }
+        }
+        .dropdown-menu {
+            border-radius: $border-radius;
+            position: absolute;
+            min-width: 220px;
+            padding: 1em;
+            height: 0;
+            opacity: 0;
+            margin: 0;
+            transition: all .5s ease;
+            background: $dropdown-bg;
+            .dropdown-menu {
+                top: 0;
+                left: 100%;
+                padding: 0;
+            }
+            .flipped .dropdown-menu {
+                right: 100%;
+                left: auto;
+            }
+            &:before {
+                content: " ";
+                height: 25px;
+                width: 25px;
+                background-color: $dropdown-bg;
+                margin: -10px auto 0;
+transform: rotate(45deg);
+            }
+        }
+        .dropdown > a:first-of-type,
+        .dropdown > span:first-of-type {
+            &::after {
+                margin-left: 8px;
+                font-family: FontAwesome;
+                line-height: 0;
+                content: "\f107";
+                font-display: swap;
+            }
+        }
+        .dropdown-menu .dropdown > a:first-of-type,
+        .dropdown-menu .dropdown > span:first-of-type {
+            &::after {
+                position: absolute;
+                top: 30px;
+                right: 16px;
+                font-family: FontAwesome;
+                line-height: 0;
+                content: "\f105";
+                font-display: swap;
+            }
+        }
+    }
+}
+
+// Mobile menu button
+
+
+.nav-toggle {
+    height: $header-height;
+    &.hamburger {
+        padding: .5em 0;
+        line-height: 1;
+    }
+    @include min-lg {
+        display: none;
+    }
+    
+}
+
+// Dropdown menu button
+.dropdown-btn {
+    padding: 15px 15px;
+    width: 72px;
+    border: 0;
+    background-color: transparent;
+
+    @include min-lg {
+        display: none;
+
+    }
+}

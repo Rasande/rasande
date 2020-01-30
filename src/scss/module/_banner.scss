@@ -1,0 +1,64 @@
+.banner {
+    height: 20vh;
+    background-size: cover;
+    background-position: center;
+
+    &-title {
+        color: $banner-color;
+    }
+}
+
+.banner-image {
+    background-color: $banner-bg;
+    background-blend-mode: overlay;
+
+    // Gradient at the top for the menu
+
+}
+
+.banner-video {
+    position: relative;
+    background-position: right center;
+    background-repeat: no-repeat;
+
+    .banner-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+        min-height: 100%;
+        min-width: 100%;
+        overflow: hidden;
+
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            min-height: 100%;
+            min-width: 100%;
+            height: auto;
+            width: auto;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .banner-video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+
+.banner-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
