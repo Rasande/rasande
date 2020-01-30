@@ -1,0 +1,18 @@
+.brand {
+    margin-right: auto;
+    .brand-name, h1.brand-name {
+        display: block;
+        margin: 0;
+        font-size: $font-size-lg;
+        font-weight: bold;
+        line-height: 1;
+        letter-spacing: 0;
+    }
+    .custom-logo {
+        max-height: 35px;
+        width: auto;
+    }
+    .custom-logo-link {
+        display: flex;
+    }
+}
