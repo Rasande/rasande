@@ -2,10 +2,18 @@ header.site-header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 60px;
-    padding-top: 1.2em;
-    // Theme
-    background-color: $header-bg;
+    background-color: $mobile-header-bg;
     color: $header-color;
     z-index: 99999;
+    transition: all .3s ease;;
+
+    &.active {
+        background-color: $mobile-header-active-bg;
+    }
+    @include min-lg {
+        background-color: $desktop-header-bg;
+        &.active {
+            background-color: $desktop-header-active-bg;
+        }
+    }
 }

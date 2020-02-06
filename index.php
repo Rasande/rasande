@@ -9,27 +9,25 @@
 
 get_header(); ?>
 			
-	<div>
+	<div class="site-content">
 	
-		<div>
-
-		    <main>
+		    <main class="main">
 		    
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <?php if (have_posts()) : 
 
-							<?php get_template_part( 'parts/loop', 'archive' ); ?>
+                    while (have_posts()) : the_post(); ?>
 
-				<?php endwhile; ?>	
-					
-				<?php else : ?>
-											
-					<?php get_template_part( 'parts/content', 'missing' ); ?>
-						
+                        <?php get_template_part( 'parts/page', 'banner' ); ?>
+
+                        <div class="entry-content">
+                                <?php the_content(); ?>
+                        </div>
+
+                    <?php endwhile; ?>	
+                    
 				<?php endif; ?>
 																								
 		    </main> 
-
-		</div> 
 
 	</div> 
 

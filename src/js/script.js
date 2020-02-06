@@ -26,11 +26,20 @@
         $(toggle).removeClass( 'is-active' );
     }
 
+    function navMargin() {
+
+        let headerHeight = $( '.site-header' ).outerHeight();
+
+        $(navigation).css( 'margin-top', headerHeight );
+
+    }
+
     // Open mobile menu
     $(toggle).click(function(e) {
         e.preventDefault(); 
 
         toggleMenu();
+        navMargin();
 
     });
 
@@ -72,6 +81,7 @@
 
                 if ($(navigation).hasClass( 'open' )) {
                     toggleMenu();
+                    navMargin();
                 }
                 
                 closeAllDropdowns();
@@ -81,12 +91,54 @@
 
     // Change header color on scroll
     $(window).on("scroll", function() {
-        if($(window).scrollTop() > 60) {
+        if($(window).scrollTop() >= 60) {
             $(".site-header").addClass("active");
         } else {
             //remove the background property so it comes transparent again (defined in your css)
            $(".site-header").removeClass("active");
         }
     });
+
+    // Dropdown out of window fallback
+    $(".dropdown").on('mouseenter focus mouseleave', function (e) {
+        if ($('ul', this).length) {
+            var elm = $('ul:first', this);
+            var off = elm.offset();
+            var l = off.left;
+            var w = elm.width();
+            var docW = $("body").width();
+
+            var isEntirelyVisible = (l + w <= docW);
+
+            if (!isEntirelyVisible) {
+                $(this).addClass('flipped');
+            } else {
+                $(this).removeClass('flipped');
+            }
+        }
+    });
+
+
+    // Portfolio
+    $(window).load(function() {
+        // Tell Isotope to watch the .portfolio container
+        var $container = $('.portfolio');
+        $container.isotope({
+           filter: '*',
+           layoutMode: 'Masonry',
+           resizable: false,
+        });
+        // When the portfolio category is clicked, filter.
+        $('.portfolio-filter li').click(function() {
+           var selector = $(this).attr('data-filter');
+           $container.isotope({
+              filter: selector,
+           });
+           $('.portfolio-filter li').removeClass('active');
+           $(this).addClass('active');
+           return false;
+        });
+     });
+  
 
 })( jQuery );

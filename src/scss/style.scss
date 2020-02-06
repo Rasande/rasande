@@ -1,5 +1,6 @@
-@import     "variables",
-            "theme";
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+
+@import     "variables";
 
 // Base
 @import     "base/mixins",
@@ -21,8 +22,9 @@
 @import     "module/banner",
             "module/brand",
             "module/hero",
-            "module/navigation",
-            "module/socialmedia";
+            "module/navigation";
 
 // State
 @import     "state";
+
+@import     "theme";

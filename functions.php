@@ -15,9 +15,8 @@ $rasande_includes = array(
 	'/navigation.php',
 	'/nav-walker.php',
 	'/widgets.php',
-	'/plugins.php',
 	'/classes.php',
-	'/options.php',
+	'/acf.php',
 	'/admin.php'
 );
 

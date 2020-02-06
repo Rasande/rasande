@@ -6,6 +6,6 @@
 
 get_header(); ?>
 
-404
+Single portfolio
 
 <?php get_footer(); ?>

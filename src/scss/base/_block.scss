@@ -1,10 +1,15 @@
 .entry-content>* {
     max-width: $entry-max-width;
+    padding: 0 1rem;
     margin: 1.5em auto;
+    @include min-sm {
+        padding: 0 2rem;
+    }
 }
 
 .entry-content>.alignfull {
     max-width: 100%;
+    padding: 0;
 }
 
 .entry-content>.alignwide {

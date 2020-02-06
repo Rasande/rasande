@@ -2,7 +2,10 @@
 
 // Adding WP functions and theme support
 function rasande_theme_support() {
-    
+	
+	// Setup for translation
+	load_theme_textdomain( 'rasande', get_template_directory() . '/lang' );
+
     // Add WP Thumbnail Support
 	add_theme_support( 'post-thumbnails' );
 	
@@ -27,7 +30,7 @@ function rasande_theme_support() {
 	add_theme_support( 'html5', [ 'script', 'style' ] );
 
 	add_theme_support( 'custom-logo', array(
-		'height'      => 60,
+		'height'      => 40,
 		'width'       => 400,
 		'flex-height' => true,
 		'flex-width'  => true,
@@ -55,6 +58,7 @@ function rasande_theme_support() {
 	add_theme_support( 'align-wide' );
 	
 	// Header cleanup
+
 		// Remove category feeds
 		remove_action( 'wp_head', 'feed_links_extra', 3 );
 		// Remove post and comment feeds
