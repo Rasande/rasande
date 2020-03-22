@@ -23,22 +23,7 @@
 							</div>
 						</div>
 						<div class="cell auto">
-							<?php
-								if( have_rows('social_media', 'option') ):
-									echo '<ul class="social">';
-									while ( have_rows('social_media', 'option') ) : the_row();
-										$socialchannel = get_sub_field('social_channel', 'option');
-										$socialurl = get_sub_field('social_url', 'option');
-										$socialtag = get_sub_field('social_tag', 'option');
-										echo '<li class="social-item">';
-										echo '<a class="social-link" rel="nofollow noopener noreferrer" href="' . $socialurl . '" target="_blank">';
-										echo '<i class="fa fa-' . $socialchannel . '" aria-hidden="true"></i>';
-										//echo ucfirst($socialchannel);
-										echo '</a></li>';
-									endwhile;
-									echo '</ul>';
-								endif;
-							?>
+
 						</div>
 					</div>
 					

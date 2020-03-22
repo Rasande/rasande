@@ -35,12 +35,12 @@ export const clean = () => del(['assets']);
 // Run gulp styles to compile sass files
 // Run gulp styles --prod to also minify 
 export const styles = () => {
-    return src(['src/scss/style.scss'])
-      .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
+    return src(['src/scss/style.scss', 'src/scss/editor-style.scss'])
+      .pipe(gulpif(PRODUCTION, sourcemaps.init()))
       .pipe(sass().on('error', sass.logError))
       .pipe(gulpif(PRODUCTION, postcss([ autoprefixer ])))
       .pipe(gulpif(PRODUCTION, cleanCss({compatibility:'ie8'})))
-      .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
+      .pipe(gulpif(PRODUCTION, sourcemaps.write()))
       .pipe(dest('assets/css'))
       .pipe(server.stream());
   }
@@ -65,7 +65,7 @@ export const scripts = () => {
             ]
             },
             mode: PRODUCTION ? 'production' : 'development',
-            devtool: !PRODUCTION ? 'inline-source-map' : false,
+            devtool: PRODUCTION ? 'inline-source-map' : true,
             output: {
             filename: '[name].js'
             },
@@ -73,6 +73,9 @@ export const scripts = () => {
                 jquery: 'jQuery'
             },
         }))
+        .on('error', function handleError() {
+            this.emit('end'); // Recover from errors
+          })
         .pipe(dest('assets/js'));
 }
 
