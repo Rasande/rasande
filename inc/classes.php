@@ -10,20 +10,16 @@
 defined( 'ABSPATH' ) || exit;
 
 // Change attributes of custom logo
-add_filter( 'get_custom_logo', 'rasande_change_logo_class' );
-
 if ( ! function_exists( 'rasande_change_logo_class' ) ) {
-
 	// Replaces logo CSS class.
 	function rasande_change_logo_class( $html ) {
 		$html = str_replace( 'alt=""', 'title="Home" alt="logo"', $html );
 		return $html;
-	}
+    }
+    add_filter( 'get_custom_logo', 'rasande_change_logo_class' );
 }
 
 // Set archive post prder
-add_action( 'pre_get_posts', 'rasande_archive_order'); 
-
 if ( ! function_exists( 'rasande_archive_order' ) ) {
 
     function rasande_archive_order($query){
@@ -35,5 +31,21 @@ if ( ! function_exists( 'rasande_archive_order' ) ) {
            $query->set( 'orderby', 'menu_order' );
         endif;    
     };
-    
+    add_action( 'pre_get_posts', 'rasande_archive_order'); 
+}
+
+// Fix svg size attributes
+if ( ! function_exists( 'rasande_svg_attr' ) ) {
+
+    function rasande_svg_attr( $out, $id ) {
+        $image_url  = wp_get_attachment_url( $id );
+        $file_ext   = pathinfo( $image_url, PATHINFO_EXTENSION );
+
+        if ( is_admin() || 'svg' !== $file_ext ) {
+            return false;
+        }
+
+        return array( $image_url, null, null, false );
+    }
+    add_filter( 'image_downsize', 'rasande_svg_attr', 10, 2 ); 
 }

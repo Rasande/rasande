@@ -1,8 +1,6 @@
 <?php
 /**
- * Rasande functions and definitions
- *
- * @package rasande
+ * Functions, setups and definitions
  * 
  */
 
@@ -10,13 +8,15 @@
 defined( 'ABSPATH' ) || exit;
 
 $rasande_includes = array(
-	'/theme-setup.php',
+	'/setup.php',
+	'/cleanup.php',
 	'/enqueue.php',
-	'/navigation.php',
 	'/nav-walker.php',
-	'/widgets.php',
 	'/classes.php',
-	'/acf.php',
+	'/hooks.php',
+	'/widgets.php',
+	//'/acf.php',
+	//'/acf-blocks.php',
 	'/admin.php'
 );
 

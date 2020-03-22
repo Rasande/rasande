@@ -27,7 +27,7 @@
 
 						<div class="cell auto">
 							<div class="brand">
-								<?php get_template_part( 'parts/custom-logo' ) ?>
+								<?php get_template_part( 'parts/navbar-logo' ) ?>
 							</div>
 						</div>
 						<div class="cell shrink">
@@ -45,11 +45,7 @@
 							</nav>
 						</div>
 						<div class="cell shrink hide-lg">
-							<button class="nav-toggle hamburger hamburger--squeeze" type="button" aria-label="<?php esc_attr_e( 'Toggle navigation', 'rasande' ); ?>">
-								<span class="hamburger-box">
-									<span class="hamburger-inner"></span>
-								</span>
-							</button>
+							<?php get_template_part( 'parts/navbar', 'toggle' ); ?>
 						</div>
 					</div>
 				</div>

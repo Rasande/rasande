@@ -17,7 +17,6 @@ get_header(); ?>
 
                     while (have_posts()) : the_post(); ?>
 
-                        <?php get_template_part( 'parts/page', 'banner' ); ?>
 
                         <div class="entry-content">
                                 <?php the_content(); ?>

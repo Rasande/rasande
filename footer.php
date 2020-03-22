@@ -8,27 +8,32 @@
  */			
  ?>
 					
-				<footer class="site-footer">
-
+		<footer class="site-footer">
+			<div class="footer-cta"></div>
+			<div class="footer-animation"></div>
+			<div class="footer-info">
 				<div class="grid-container">
 					<div class="grid-x">
-						<div class="cell auto">
-							<div class="copyright">
-								<?php if( get_field('copyright_info','option') ): ?>
-									<?php $copyright = get_field('copyright_info','option'); ?>
-										<p class="copyright-info">
-										&copy; <?php echo date("Y"); ?> <?php echo $copyright ?>
-										</p>
-								<?php endif; ?>
-							</div>
+						<div class="column">
+							<?php rasande_copyright(); ?>
 						</div>
-						<div class="cell auto">
-
+						<div class="column">
+							<?php wp_nav_menu( array(
+									'theme_location'  => 'footer',
+									'container_class' => 'nav-container',
+									'menu_class'      => 'nav-menu',
+									'items_wrap'      => '<ul class="%2$s">%3$s</ul>' ,
+									'fallback_cb'     => '',
+									'walker'          => new Rasande_WP_Navwalker(),
+							)); ?>
+						</div>
+						<div class="column">
+							Instagram
 						</div>
 					</div>
-					
 				</div>
-				</footer> <!-- end .footer -->
+			</div>
+		</footer> <!-- end .site-footer -->
 		
 		<?php wp_footer(); ?>
 		
