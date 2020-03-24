@@ -1,77 +1,43 @@
-// Media query mixin
-$screen-sm-min: $breakpoint-sm;
-$screen-md-min: $breakpoint-md;
-$screen-lg-min: $breakpoint-lg;
-$screen-xl-min: $breakpoint-xl;
+// Respond above.
+@mixin respond-above($breakpoint) {
 
-$screen-xs-max: $breakpoint-xs - 1px;
-$screen-sm-max: $breakpoint-sm - 1px;
-$screen-md-max: $breakpoint-md - 1px;
-$screen-lg-max: $breakpoint-lg - 1px;
-$screen-xl-max: $breakpoint-xl - 1px;
-
-@mixin min-sm {
-    @media (min-width: #{$screen-sm-min}) {
+    // If the breakpoint exists in the map.
+    @if map-has-key($breakpoints, $breakpoint) {
+  
+      // Get the breakpoint value.
+      $breakpoint-value: map-get($breakpoints, $breakpoint);
+  
+      // Write the media query.
+      @media (min-width: $breakpoint-value) {
         @content;
+      }
+  
+    // If the breakpoint doesn't exist in the map.
+    } @else {
+  
+      // Log a warning.
+      @warn 'Invalid breakpoint: #{$breakpoint}.';
     }
-}
+  }
+  
+  // Respond below.
+@mixin respond-below($breakpoint) {
 
-@mixin min-md {
-    @media (min-width: #{$screen-md-min}) {
-        @content;
-    }
-}
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
 
-@mixin min-lg {
-    @media (min-width: #{$screen-lg-min}) {
-        @content;
-    }
-}
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
 
-@mixin min-xl {
-    @media (min-width: #{$screen-xl-min}) {
-        @content;
+    // Write the media query.
+    @media (max-width: $breakpoint-value) {
+      @content;
     }
-}
 
-@mixin min-custom($screen) {
-    @media (min-width: $screen+'px') {
-        @content;
-    }
-}
+  // If the breakpoint doesn't exist in the map.
+  } @else {
 
-@mixin max-xs {
-    @media (max-width: #{$screen-xs-max}) {
-        @content;
-    }
-}
-
-@mixin max-sm {
-    @media (max-width: #{$screen-sm-max}) {
-        @content;
-    }
-}
-
-@mixin max-md {
-    @media (max-width: #{$screen-md-max}) {
-        @content;
-    }
-}
-
-@mixin max-lg {
-    @media (max-width: #{$screen-lg-max}) {
-        @content;
-    }
-}
-
-@mixin max-xl {
-    @media (max-width: #{$screen-xl-max}) {
-        @content;
-    }
-}
-
-@mixin max-custom($screen) {
-    @media (max-width: $screen+'px') {
-        @content;
-    }
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
 }

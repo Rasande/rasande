@@ -1,0 +1,38 @@
+.entry-content>* {
+   // max-width: $entry-max-width;
+    padding: 0 1rem;
+    margin: 1.5em auto;
+    //@include min-sm {
+     //   padding: 0 2rem;
+    //}
+}
+
+.entry-content>.alignfull {
+    max-width: 100%;
+    padding: 0;
+}
+
+.entry-content>.alignwide {
+   // max-width: $container-max-width;
+}
+
+.entry-content>img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wp-block-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large {
+    margin: 36px auto;
+    padding: 0;
+}
+
+.entry-header {
+   // max-width: $entry-max-width;
+    margin: 1.5em auto;
+}

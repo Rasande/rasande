@@ -1,29 +1,57 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
-
-@import     "variables";
-
-// Base
-@import     "base/mixins",
-            "base/base",
-            "base/block";
-
 // Vendor
-@import     "vendor/foundation/foundation.scss",
+@import     "vendor/foundation/foundation", // Move the code
             "vendor/hamburgers/hamburgers",
             "vendor/fontawesome/font-awesome";
 
+// Base
+@import     "base/variables", 
+            "base/mixins", 
+            "base/normalize",
+            "base/base"; // Not done
+
 // Layout
-@import     "layout/footer",
-            "layout/header",
-            "layout/main";
+@import     "layout/grid", // Not done
+            "layout/header", // Not done
+            "layout/main", // Not done
+            "layout/footer"; // Not done
 
 // Modules
-@import     "module/banner",
-            "module/brand",
-            "module/hero",
-            "module/navigation";
+@import     "module/accordion", // Not done
+            "module/badge", // Not done
+            "module/brand", // Not done
+            "module/breadcrumbs", // Not done
+            "module/buttons", // Not done
+            "module/callout", // Not done
+            "module/card", // Not done
+            "module/dropdown", // Not done
+            "module/hero", // Not done
+            "module/label", // Not done
+            "module/menu", // Not done 
+            "module/orbit", // Not done
+            "module/pagination", // Not done
+            "module/progress-bar", // Not done
+            "module/slider", // Not done
+            "module/switch", // Not done
+            "module/table", // Not done
+            "module/tabs", // Not done
+            "module/tooltip", // Not done
+            "module/topbar"; // Not done
+
+// Wordpress
+@import     "wordpress/gutenberg", // Not done
+            "wordpress/plugins/cf7";
+            //"wordpress/blocks/*",
+            
 
 // State
-@import     "state";
+@import     "state/align", // Not done
+            "state/float",
+            "state/off-canvas", // Not done
+            "state/order", // Not done
+            "state/print", // Not done
+            "state/sticky",
+            "state/theme",
+            "state/visibility";// Not done
 
+// Custom styles 
 @import     "theme";

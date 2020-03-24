@@ -12,20 +12,20 @@ get_header(); ?>
 	<div class="site-content">
 	
 		    <main class="main">
-		    
+                <div class="grid-container">
                 <?php if (have_posts()) : 
 
                     while (have_posts()) : the_post(); ?>
 
 
-                        <div class="entry-content">
+                        
                                 <?php the_content(); ?>
-                        </div>
+                
 
                     <?php endwhile; ?>	
                     
 				<?php endif; ?>
-																								
+                </div>
 		    </main> 
 
 	</div> 
