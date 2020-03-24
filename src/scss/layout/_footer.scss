@@ -2,16 +2,6 @@
     padding-top: 4em;
     padding-bottom: 4em;
     margin-top: auto;
-    background-color: $footer-bg;
-    color: $footer-color;
-
-    a {
-        color: $footer-link-color;
-
-        &:hover {
-            color: $footer-link-hover;
-        }
-    }
 }
 
 .social {
@@ -32,7 +22,6 @@
         }
     }
 }
-
 .copyright {
     font-size: 14px;
     .copyright-info {
