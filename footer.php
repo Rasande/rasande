@@ -9,15 +9,20 @@
  ?>
 					
 		<footer class="site-footer">
-			<div class="footer-cta"></div>
+			<div class="footer-cta">
+				<div class="grid-container">
+					<h4>Funderat klart?</h4>
+					Dags att ta tag i hemsidan
+				</div>
+			</div>
 			<div class="footer-animation"></div>
 			<div class="footer-info">
 				<div class="grid-container">
-					<div class="grid-x">
-						<div class="column">
+					<div class="grid-x grid-margin-x">
+						<div class="cell shrink">
 							<?php rasande_copyright(); ?>
 						</div>
-						<div class="column">
+						<div class="cell auto">	
 							<?php wp_nav_menu( array(
 									'theme_location'  => 'footer',
 									'container_class' => 'nav-container',
@@ -27,7 +32,7 @@
 									'walker'          => new Rasande_WP_Navwalker(),
 							)); ?>
 						</div>
-						<div class="column">
+						<div class="cell shrink">
 							Instagram
 						</div>
 					</div>

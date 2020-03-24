@@ -8,15 +8,14 @@
             "base/block";
 
 // Vendor
-@import     "vendor/hamburgers/hamburgers",
+@import     "vendor/foundation/foundation.scss",
+            "vendor/hamburgers/hamburgers",
             "vendor/fontawesome/font-awesome";
 
 // Layout
 @import     "layout/footer",
-            "layout/grid",
             "layout/header",
-            "layout/main",
-            "layout/sidebar";
+            "layout/main";
 
 // Modules
 @import     "module/banner",
