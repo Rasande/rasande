@@ -107,12 +107,12 @@ i {
 }
 
 strong,
-b {
+b, .bold {
     font-weight: bold;
     line-height: inherit;
 }
 
-small {
+small, .small {
     font-size: 80%;
     line-height: inherit;
 }
@@ -234,16 +234,23 @@ screen and (min-width: 40em) {
     }
 }
 
+.display {
+    font-size: $display-font-size;
+    line-height: $display-line-height;
+}
+
 a {
     line-height: inherit;
-    color: #1779ba;
+    color: $link-color;
     text-decoration: none;
     cursor: pointer;
+    transition: color $transition-time ease;
 }
 
 a:hover,
-a:focus {
-    color: #1468a0;
+a:focus,
+a:active {
+    color: $link-color-hover;
 }
 
 a img {
