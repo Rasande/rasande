@@ -16,7 +16,7 @@
 				</div>
 			</div>
 			<div class="footer-animation"></div>
-			<div class="footer-info">
+			<div class="footer-info small">
 				<div class="grid-container">
 					<div class="grid-x grid-margin-x">
 						<div class="cell shrink">
