@@ -22,31 +22,9 @@
 		<?php do_action( 'wp_body_open' ); ?>
 
 			<header class="site-header">
-				<div class="grid-container fluid">
-					<div class="grid-x align-center-middle no-wrap">
-
-						<div class="cell auto">
-							<div class="brand">
-								<?php get_template_part( 'parts/navbar-logo' ) ?>
-							</div>
-						</div>
-						<div class="cell shrink">
-							<nav class="navigation">
-								<?php wp_nav_menu(
-									array(
-										'theme_location'  => 'primary',
-										'container_class' => 'nav-container',
-										'menu_class'      => 'nav-menu',
-										'items_wrap'      => '<ul class="%2$s">%3$s</ul>' ,
-										'fallback_cb'     => '',
-										'walker'          => new Rasande_WP_Navwalker(),
-									)
-								); ?>
-							</nav>
-						</div>
-						<div class="cell shrink hide-lg">
-							<?php get_template_part( 'parts/navbar', 'toggle' ); ?>
-						</div>
-					</div>
+				<div class="navbar navbar-expand navbar-light">
+				<div class="navbar-brand">
+				rasande
+				</div>
 				</div>
 			</header>

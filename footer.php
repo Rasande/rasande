@@ -10,14 +10,14 @@
 					
 		<footer class="site-footer">
 			<div class="footer-cta">
-				<div class="grid-container">
+				<div class="container">
 					<h4>Funderat klart?</h4>
 					Dags att ta tag i hemsidan
 				</div>
 			</div>
 			<div class="footer-animation"></div>
 			<div class="footer-info small">
-				<div class="grid-container">
+				<div class="container">
 					<div class="grid-x grid-margin-x">
 						<div class="cell shrink">
 							<?php rasande_copyright(); ?>
