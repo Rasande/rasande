@@ -29,6 +29,6 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.2.1",
-    "foundation-sites": "^6.6.1"
+    "popper.js": "^1.16.1"
   }
 }
