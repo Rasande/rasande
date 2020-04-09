@@ -7,6 +7,9 @@
  * It is used to display a page when nothing more specific matches a query.
  */
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 get_header(); ?>
 			
 	<div class="site-content">
@@ -17,10 +20,14 @@ get_header(); ?>
 
                     while (have_posts()) : the_post(); ?>
 
-                        
-                                <?php the_content(); ?>
-                
+                        <h1 class="display-1 font-weight-bold"><?php the_title(); ?></h1>
+                        <div class="banner">
 
+                        </div>
+                        <div class="entry-content">
+                            <?php the_content(); ?>
+                        </div>
+                                
                     <?php endwhile; ?>	
                     
 				<?php endif; ?>
