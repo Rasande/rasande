@@ -1,13 +1,17 @@
 {
   "name": "rasande",
   "version": "1.0.0",
-  "description": "",
+  "description": "Lets build a WordPress site!",
   "main": "index.js",
   "scripts": {
     "start": "gulp --prod",
     "build": "gulp build --prod"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rasande/rasande"
+  },
+  "author": "Andreas Jansson",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.9.0",
