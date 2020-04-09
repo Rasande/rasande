@@ -11,6 +11,8 @@ import Toast from './vendor/bootstrap/toast'
 import Tooltip from './vendor/bootstrap/tooltip'
 import Util from './vendor/bootstrap/util'
 
+import './modules/custom'
+import './modules/navigation'
 /**
  * --------------------------------------------------------------------------
  * Bootstrap (v4.4.1): index.js
