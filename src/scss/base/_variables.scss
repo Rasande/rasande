@@ -1,0 +1,36 @@
+// Colors
+$primary: #cc5252;
+$secondary: #ccc452;
+
+$black: #000;
+
+// Fonts
+$font-size-base: 1.3rem;
+$font-family-sans-serif: 'Open Sans', sans-serif;;
+$headings-font-family:'Montserrat', sans-serif;
+$headings-font-weight:800;
+
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+// Navbar
+$navbar-font-size: .9rem;
+$navbar-light-hover-color:          rgba($black, .7) !default;
+$navbar-light-active-color:         rgba($black, .5) !default;
+$navbar-light-color:  
+              rgba($black, .9) !default;
+// Dropdown
+$dropdown-font-size: $navbar-font-size;
+
+$dropdown-bg: rgba(255, 255, 255, 1);
+$dropdown-link-hover-bg: transparent;
+$dropdown-link-active-bg: transparent;
+// Hamburger
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: 30px;
+$hamburger-layer-height : 3px;
+$hamburger-layer-color: #212529;
