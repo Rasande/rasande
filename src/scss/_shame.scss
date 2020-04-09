@@ -1,0 +1,50 @@
+body {
+    overflow-x: hidden;
+}
+main {
+    height: 200vh;
+}
+a {
+    transition: color .25s ease;
+}
+.site-content a {
+    background:
+    linear-gradient(
+    to bottom, $primary 0%,
+    $primary 100%
+    );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    transition: background-size .2s;
+    color: $dark;
+
+    &:hover {
+        text-decoration: none;
+        background-size: 2px 100%;
+    }
+}
+
+
+
+a {
+
+  }
+  
+  a:hover {
+    
+  }
+
+
+
+  .banner {
+      height: 500px;
+      background-image: url(../img/test.jpg);
+      background-position: center;
+  }
+
+  .alignfull {
+	margin: 32px calc(50% - 50vw);
+	max-width: 100vw;
+	width: 100vw;
+}
