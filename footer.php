@@ -18,11 +18,11 @@
 			<div class="footer-animation"></div>
 			<div class="footer-info small">
 				<div class="container">
-					<div class="grid-x grid-margin-x">
-						<div class="cell shrink">
+					<div class="row">
+						<div class="col-auto">
 							<?php rasande_copyright(); ?>
 						</div>
-						<div class="cell auto">	
+						<div class="col">	
 							<?php wp_nav_menu( array(
 									'theme_location'  => 'footer',
 									'container_class' => 'nav-container',
@@ -32,7 +32,7 @@
 									'walker'          => new Rasande_WP_Navwalker(),
 							)); ?>
 						</div>
-						<div class="cell shrink">
+						<div class="col small text-right">
 							Instagram
 						</div>
 					</div>
