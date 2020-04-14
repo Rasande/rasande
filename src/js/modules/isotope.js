@@ -1,30 +1,60 @@
 jQuery(function ($) {
 
-    var $container = $('.gallery'); //The ID for the list with all the blog posts
-    $container.isotope({ //Isotope options, 'item' matches the class in the PHP
-    itemSelector : '.gallery-item', 
+  function getHashFilter() {
+    var hash = location.hash;
+    // get filterName
+    var matches = location.hash.match( /([^&]+)/i );
+    var hashFilter = matches && matches[1];
+    return hashFilter && decodeURIComponent( hashFilter ).substr(1);
+  }
+  
+  $( function() {
+  
+    var $grid = $('.gallery');
+  
+
+    // bind filter button click
+    var $filters = $('.btn-filter-group').on( 'click', 'button', function() {
+      var filterAttr = $( this ).attr('data-filter');
+      // set filter in hash
+      location.hash = '' + encodeURIComponent( filterAttr );
+    });
+  
+
+    var isIsotopeInit = false;
+  
+
+    function onHashchange() {
+      var hashFilter = getHashFilter();
+      if ( !hashFilter && isIsotopeInit ) {
+        return;
+      }
+  
+
+      isIsotopeInit = true;
+      // filter isotope
+      $grid.isotope({
+        itemSelector: '.gallery-item',
         layoutMode : 'masonry',
-    });
-    
-    //Add the class selected to the item that is clicked, and remove from the others
-    var $optionSets = $('.btn-filter-group'),
-    $optionLinks = $optionSets.find('button');
-    
-    $optionLinks.click(function(){
-    var $this = $(this);
-    // don't proceed if already selected
-    if ( $this.hasClass('selected') ) {
-      return false;
+        masonry : {
+          gutter : '.gallery-item-gutter'
+        },
+        filter: hashFilter
+      });
+
+
+      // set selected class on button
+      if ( hashFilter ) {
+        $filters.find('.selected').removeClass('selected');
+        $filters.find('[data-filter="' + hashFilter + '"]').addClass('selected');
+      }
     }
-    var $optionSet = $this.parents('.btn-filter-group');
-    $optionSets.find('.selected').removeClass('selected');
-    $this.addClass('selected');
+  
+
+    $(window).on( 'hashchange', onHashchange );
+    // trigger event handler to init Isotope
+    onHashchange();
+
+  });
     
-    //When an item is clicked, sort the items.
-    var selector = $(this).attr('data-filter');
-    $container.isotope({ filter: selector });
-    
-    return false;
-    });
-    
-   });
+});

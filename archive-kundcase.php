@@ -15,9 +15,8 @@ get_header(); ?>
 	<div class="site-content">
 	
 		    <main class="main">
-                
 
-                <div class="container">
+                <div class="container-wide">
                     <div class="gallery-filter">
                     
                     <?php
@@ -44,13 +43,24 @@ get_header(); ?>
                     </div>
 
                     <div class="gallery">
-
+                    <div class="gallery-item-gutter"></div>
                     <?php if (have_posts()) : 
 
                         while (have_posts()) : the_post(); ?>
-                            <?php $tax = get_the_terms( $post->ID, 'kundcase_category' ); ?>
-                            <?php $taxName = $tax[0]->name;?>
-                            <div class="gallery-item <?php echo strtolower($taxName) ?>">
+
+                            <?php 
+                            $categories = get_the_terms( $post->ID, 'kundcase_category' );
+
+                            $output = '';
+                            if ( ! empty( $categories ) ) {
+                                foreach( $categories as $category ) {
+                                    $output .= strtolower( $category->name );
+                                    $output .= ' ';
+                                }
+                            }
+                            ?>
+
+                            <div class="gallery-item <?php  echo trim( $output ); ?>">
                                 <?php the_title();?>
                                 <?php the_post_thumbnail(); ?>
                             </div>
