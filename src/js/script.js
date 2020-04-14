@@ -11,8 +11,12 @@ import Toast from './vendor/bootstrap/toast'
 import Tooltip from './vendor/bootstrap/tooltip'
 import Util from './vendor/bootstrap/util'
 
+import './vendor/isotope/isotope.pkgd'
+
 import './modules/custom'
 import './modules/navigation'
+import './modules/isotope'
+
 /**
  * --------------------------------------------------------------------------
  * Bootstrap (v4.4.1): index.js

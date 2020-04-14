@@ -48,3 +48,31 @@ a {
 	max-width: 100vw;
 	width: 100vw;
 }
+
+
+.gallery {
+
+    &-item {
+        box-sizing: border-box;
+        //padding: 1em;
+        //margin: 2em;
+        width: 100%;
+        background-color: pink;
+        @media only screen and (min-width: 800px) {
+            width: 50%;
+
+        }
+
+        &-sizer {
+            width: 50%; 
+        }
+        &-gutter {
+
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+

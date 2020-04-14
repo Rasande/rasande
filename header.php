@@ -34,6 +34,7 @@
 						'menu_class' => 'navbar-nav ml-auto',
 						'depth' => 0,
 						'walker' => new Rasande_WP_Navwalker(),
+						'fallback_cb' => ''
 						 ) 
 					); ?>
 					</div>
