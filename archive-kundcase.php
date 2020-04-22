@@ -15,8 +15,9 @@ get_header(); ?>
 	<div class="site-content">
 	
 		    <main class="main">
+                <div class="container">
+                <h1 class="display-1 font-weight-bold"><?php the_archive_title(); ?></h1>
 
-                <div class="container-wide">
                     <div class="gallery-filter">
                     
                     <?php
@@ -61,8 +62,18 @@ get_header(); ?>
                             ?>
 
                             <div class="gallery-item <?php  echo trim( $output ); ?>">
-                                <?php the_title();?>
-                                <?php the_post_thumbnail(); ?>
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="gallery-item-wrapper">
+                                <div class="gallery-item-inner" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
+                                   
+                                        <div class="gallery-item-content">
+                                            <?php the_title();?>
+                                        </div>
+                                        <?php the_post_thumbnail(); ?>
+                                   
+                                </div>
+                                </div>
+                                </a>
                             </div>
                                     
                         <?php endwhile; ?>	

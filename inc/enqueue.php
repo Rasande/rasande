@@ -15,8 +15,8 @@ if ( ! function_exists( 'rasande_scripts' ) ) {
 		wp_enqueue_style( 'rasande-styles', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0' );
 
         // Load scripts
-        wp_register_script('isotope', 'https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js');
-        wp_enqueue_script('isotope');
+        //wp_register_script('isotope', 'https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js');
+        //wp_enqueue_script('isotope');
 
         wp_enqueue_script( 'rasande-scripts', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), '1.0.0', true );
         

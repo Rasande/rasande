@@ -55,9 +55,8 @@ a {
     &-item {
         box-sizing: border-box;
         //padding: 1em;
-        margin-bottom: 3.5em;
+        margin-bottom: 4%;
         width: 100%;
-        background-color: pink;
         @media only screen and (min-width: 800px) {
             width: 48%;
 
@@ -73,14 +72,41 @@ a {
             width: 100%;
             height: auto;
         }
+        &-wrapper {
+            position: relative;
+
+        }
+        &-inner {
+            transform-style: preserve-3d;
+        }
+        &-content {
+            background-color: #fff;
+            position: absolute;
+            bottom: 0;
+            padding: 1em 2em;
+            transform: translateZ(40px);
+        }
     }
 }
 
 .container-wide {
     width: 100%;
     max-width: 1920px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 4%;
+    padding-left: 4%;
     margin-right: auto;
     margin-left: auto;
+}
+
+
+
+
+.navbar-brand img {
+    height: auto;
+    width: 100%;
+    max-width:75px
+}
+
+.navbar {
+    pointer-events: visibleFill;
 }
