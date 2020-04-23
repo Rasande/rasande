@@ -11,13 +11,6 @@ import Dropdown from './vendor/bootstrap/dropdown'
 //import Tooltip from './vendor/bootstrap/tooltip'
 import Util from './vendor/bootstrap/util'
 
-import './vendor/isotope/isotope.pkgd'
-
-import './vendor/tilt/tilt.jquery'
-
-import './modules/custom'
-import './modules/navigation'
-import './modules/isotope'
 
 /**
  * --------------------------------------------------------------------------
@@ -40,3 +33,14 @@ export {
   //Toast,
   //Tooltip
 }
+
+
+import './vendor/isotope/isotope.pkgd'
+
+import './vendor/tilt/tilt.jquery'
+
+import './vendor/rellax/rellax'
+
+import './modules/custom'
+import './modules/navigation'
+import './modules/isotope'

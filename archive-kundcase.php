@@ -15,10 +15,9 @@ get_header(); ?>
 	<div class="site-content">
 	
 		    <main class="main">
-                <div class="container">
-                <h1 class="display-1 font-weight-bold"><?php the_archive_title(); ?></h1>
-
-                    <div class="gallery-filter">
+            <div class="container">
+            <h1 class="display-1 font-weight-bold"><?php the_archive_title(); ?></h1>
+            <div class="gallery-filter">
                     
                     <?php
 
@@ -28,7 +27,8 @@ get_header(); ?>
                         if ( $terms && !is_wp_error( $terms ) ) :
                         ?>
                             <div class="btn-group btn-filter-group" role="group" aria-label="<?php __('Filter cases', 'rasande') ?>">
-                            <button type="button" class="btn btn-light selected" data-filter="*"><?php echo __('Show All', 'rasande'); ?></button>
+                                <button type="button" class="btn btn-link selected" data-filter="*"><?php echo __('Show All', 'rasande'); ?></button>
+
 
                                 <?php foreach ( $terms as $term ) { ?>
 
@@ -36,12 +36,17 @@ get_header(); ?>
                                     $filterData = '.';
                                     $filterData .= $term->name; ?>
 
-                                    <button type="button" class="btn btn-light" data-filter="<?php echo strtolower($filterData); ?>"><?php echo $term->name; ?></button>
+                                    <button type="button" class="btn btn-link" data-filter="<?php echo strtolower($filterData); ?>"><?php echo $term->name; ?></button>
                                 <?php } ?>
                             </div>
                         <?php endif;?>
 
                     </div>
+        </div>
+                <div class="container-wide">
+             
+
+
 
                     <div class="gallery">
                     <div class="gallery-item-gutter"></div>
@@ -67,9 +72,10 @@ get_header(); ?>
                                 <div class="gallery-item-inner" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
                                    
                                         <div class="gallery-item-content">
-                                            <?php the_title();?>
+                                        <h2 class="name"><?php the_title();?></h2>
+                                            
                                         </div>
-                                        <?php the_post_thumbnail(); ?>
+                                        <?php the_post_thumbnail('gallery-item'); ?>
                                    
                                 </div>
                                 </div>

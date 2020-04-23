@@ -3,10 +3,19 @@
 @import "vendor/bootstrap/bootstrap.scss";
 @import "vendor/hamburgers/hamburgers.scss";
 
+@import "base/base";
+
+@import "layout/layout";
 @import "layout/site-content";
 @import "layout/site-footer";
+@import "layout/site-header";
 
+@import "module/banner";
+@import "module/brand";
+@import "module/gallery";
 @import "module/nav";
+
+@import "wordpress";
 
 @import "state/animation";
 

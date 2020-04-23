@@ -1,0 +1,11 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transform: translateZ(40px);
+    z-index: 200;
+    pointer-events: none;
+    a, li, button {
+        pointer-events: all;
+    }
+}

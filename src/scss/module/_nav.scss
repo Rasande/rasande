@@ -6,6 +6,10 @@
   letter-spacing: .5px;
   .nav-item {
     margin-left: 1em;
+    transition: transform .25s ease;
+    &:hover {
+      transform: translateY(-3px);
+    }
   }
 }
 

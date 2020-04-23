@@ -11,7 +11,7 @@
 	<html <?php language_attributes(); ?>>
 		<head>
 			<meta charset="<?php bloginfo( 'charset' ); ?>">
-			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 			<meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1"/>
 			<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 			<link rel="profile" href="http://gmpg.org/xfn/11">
@@ -24,7 +24,7 @@
 		<?php do_action( 'wp_body_open' ); ?>
 
 			<header class="site-header">
-				<nav class="navbar navbar-expand-md navbar-light fixed-top">
+				<nav class="navbar navbar-expand-md navbar-light">
 						<?php get_template_part( 'parts/navbar', 'brand' ); ?>
 						<?php get_template_part( 'parts/navbar', 'toggler' ); ?>
 					<div class="collapse navbar-collapse" id="navbar--main">

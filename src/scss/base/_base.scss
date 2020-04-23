@@ -1,0 +1,11 @@
+html, body {
+    overflow-x: hidden;
+}
+
+main {
+    min-height: 100vh; // Push down the footer
+}
+
+a {
+    transition: color .25s ease;
+}

@@ -25,6 +25,7 @@ if ( ! function_exists( 'rasande_theme_support' )) {
 
         // Add image sizes
         add_image_size( 'icon', 50, 50, true );
+        add_image_size( 'gallery-item', 510 ); 
         }
 
         // Add support for responsive embedded content
