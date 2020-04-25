@@ -39,7 +39,7 @@ import './vendor/isotope/isotope.pkgd'
 
 import './vendor/tilt/tilt.jquery'
 
-import './vendor/rellax/rellax'
+//import './vendor/rellax/rellax'
 
 import './modules/custom'
 import './modules/navigation'
