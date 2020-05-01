@@ -72,7 +72,11 @@ get_header(); ?>
                                         <h2 class="name"><?php the_title();?></h2>
                                             
                                         </div>
-                                        <?php the_post_thumbnail('gallery-item'); ?>
+                                        <?php if ( has_post_thumbnail() ) {
+                                    the_post_thumbnail('gallery-item');
+                                    } else { ?>
+                                    <img src="<?php bloginfo('template_directory'); ?>/assets/img/default-blog.jpg" alt="<?php the_title(); ?>" />
+                                <?php } ?>
                                    
                                 </div>
                                 </div>

@@ -21,7 +21,7 @@ get_header(); ?>
                     while (have_posts()) : the_post(); ?>
 
                         <h1 class="display-1 font-weight-bold"><?php the_title(); ?></h1>
-                        <div class="banner rellax" data-rellax-speed="4">
+                        <div class="banner">
 
                         </div>
                         <div class="entry-content">
