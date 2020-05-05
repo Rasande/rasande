@@ -1,17 +1,31 @@
 <?php
+/**
+ * Widgets area setup
+ * 
+ */
 
-add_action( 'widgets_init', 'rasande_widgets_init' );
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
-function rasande_widgets_init() {
-    register_sidebar(
-        array(
-            'name'          => __( 'Right Sidebar', 'rasande' ),
-            'id'            => 'sidebar-right',
-            'description'   => __( 'Right sidebar widget area', 'rasande' ),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<span class="widget-title">',
-            'after_title'   => '</span>',
-        )
-    );
+if ( ! function_exists( 'rasande_widgets_init' )) {
+
+    function rasande_widgets_init() {
+        register_sidebar( array(
+            'name' => __( 'Blog Sidebar', 'rasande' ),
+            'id' => 'blog-sidebar',
+            'before_widget' => '<div>',
+            'after_widget' => '</div>',
+            'before_title' => '<h3>',
+            'after_title' => '</h3>',
+        ) );
+        register_sidebar( array(
+            'name' => __( 'Footer 1', 'rasande' ),
+            'id' => 'footer-1',
+            'before_widget' => '<div>',
+            'after_widget' => '</div>',
+            'before_title' => '<h3>',
+            'after_title' => '</h3>',
+        ) );
+    }
+    add_action( 'widgets_init', 'rasande_widgets_init' );
 }

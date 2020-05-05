@@ -1,11 +1,23 @@
 <?php
 /**
- * 
+ * The services template file
  *
  */
 
-get_header(); ?>
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
-tjänster
+get_header(); ?>
+			
+	<div class="site-content">
+	
+		    <main class="main">
+                <div class="container">
+					<?php get_template_part( 'parts/page', 'header' ); ?>
+                </div>
+
+		    </main> 
+
+	</div> 
 
 <?php get_footer(); ?>

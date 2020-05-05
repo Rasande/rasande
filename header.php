@@ -11,10 +11,12 @@
 	<html <?php language_attributes(); ?>>
 		<head>
 			<meta charset="<?php bloginfo( 'charset' ); ?>">
-			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 			<meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1"/>
 			<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 			<link rel="profile" href="http://gmpg.org/xfn/11">
+			<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 			<?php wp_head(); ?>
 		</head>
 
@@ -22,35 +24,18 @@
 		<?php do_action( 'wp_body_open' ); ?>
 
 			<header class="site-header">
-				<div class="grid-container fluid">
-					<div class="grid-x align-center-middle no-wrap">
+				<nav class="navbar">
+						<?php get_template_part( 'parts/navbar', 'brand' ); ?>
+						<?php get_template_part( 'parts/navbar', 'toggler' ); ?>
+					<?php wp_nav_menu( array( 
+						'theme_location' => 'primary', 
+						'container' => '',
+						'menu_class' => 'navbar-nav',
+						'depth' => 0,
+						'walker' => new Rasande_WP_Navwalker(),
+						'fallback_cb' => ''
+						 ) 
+					); ?>
 
-						<div class="cell auto">
-							<div class="brand">
-								<?php get_template_part( 'parts/custom-logo' ) ?>
-							</div>
-						</div>
-						<div class="cell shrink">
-							<nav class="navigation">
-								<?php wp_nav_menu(
-									array(
-										'theme_location'  => 'primary',
-										'container_class' => 'nav-container',
-										'menu_class'      => 'nav-menu',
-										'items_wrap'      => '<ul class="%2$s">%3$s</ul>' ,
-										'fallback_cb'     => '',
-										'walker'          => new Rasande_WP_Navwalker(),
-									)
-								); ?>
-							</nav>
-						</div>
-						<div class="cell shrink hide-lg">
-							<button class="nav-toggle hamburger hamburger--squeeze" type="button" aria-label="<?php esc_attr_e( 'Toggle navigation', 'rasande' ); ?>">
-								<span class="hamburger-box">
-									<span class="hamburger-inner"></span>
-								</span>
-							</button>
-						</div>
-					</div>
-				</div>
+				</nav>
 			</header>

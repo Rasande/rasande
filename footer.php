@@ -8,27 +8,41 @@
  */			
  ?>
 					
-				<footer class="site-footer">
-
-				<div class="grid-container">
-					<div class="grid-x">
-						<div class="cell auto">
-							<div class="copyright">
-								<?php if( get_field('copyright_info','option') ): ?>
-									<?php $copyright = get_field('copyright_info','option'); ?>
-										<p class="copyright-info">
-										&copy; <?php echo date("Y"); ?> <?php echo $copyright ?>
-										</p>
-								<?php endif; ?>
-							</div>
+		<footer class="site-footer">
+			<div class="footer-cta">
+				<div class="container">
+					<h4>Funderat klart?</h4>
+					Dags att ta tag i hemsidan
+				</div>
+			</div>
+			<div class="footer-background">
+				<div class="test-shadow"></div>
+				<div class="test pattern-diagonal-stripes-lg rellax" data-rellax-speed="5"></div>
+				<div class="footer-info small">
+				<div class="container">
+					<div class="row">
+						<div class="col-auto">
+							<?php rasande_copyright(); ?>
 						</div>
-						<div class="cell auto">
-
+						<div class="col">	
+							<?php wp_nav_menu( array(
+									'theme_location'  => 'footer',
+									'container_class' => 'nav-container',
+									'menu_class'      => 'nav-menu',
+									'items_wrap'      => '<ul class="%2$s">%3$s</ul>' ,
+									'fallback_cb'     => '',
+									'walker'          => new Rasande_WP_Navwalker(),
+							)); ?>
+						</div>
+						<div class="col small text-right">
+							Instagram
 						</div>
 					</div>
-					
 				</div>
-				</footer> <!-- end .footer -->
+			</div>
+			</div>
+			
+		</footer> <!-- end .site-footer -->
 		
 		<?php wp_footer(); ?>
 		

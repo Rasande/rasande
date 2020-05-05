@@ -1,0 +1,18 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transform: translateZ(40px);
+    z-index: 200;
+    // Make header click-through
+    pointer-events: none;
+    background-color: transparent;
+    transition: background-color .5s ease, height .3s ease;
+    a, li, button {
+        pointer-events: all;
+    }
+    &.expanded {
+        background-color: rgba(255, 255, 255, 0.95);
+        height: 100vh;
+    }
+}
