@@ -20,10 +20,8 @@ get_header(); ?>
 
                     while (have_posts()) : the_post(); ?>
 
-                        <h1 class="display-1 font-weight-bold"><?php the_title(); ?></h1>
-                        <div class="banner">
+                        <?php get_template_part( 'parts/page', 'header' ); ?>
 
-                        </div>
                         <div class="entry-content">
                             <?php the_content(); ?>
                         </div>

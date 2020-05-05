@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 if ( ! function_exists( 'rasande_change_logo_class' ) ) {
 	// Replaces logo CSS class.
 	function rasande_change_logo_class( $html ) {
-		$html = str_replace( 'class="custom-logo"', 'class="img-fluid" id="rotate--scroll"', $html );
+		$html = str_replace( 'class="custom-logo"', 'class="custom-logo" id="rotate--scroll"', $html );
 		$html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $html );
 		$html = str_replace( 'alt=""', 'title="Home" alt="logo"', $html );
 

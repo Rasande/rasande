@@ -15,8 +15,10 @@
 					Dags att ta tag i hemsidan
 				</div>
 			</div>
-			<div class="footer-animation"></div>
-			<div class="footer-info small">
+			<div class="footer-background">
+				<div class="test-shadow"></div>
+				<div class="test pattern-diagonal-stripes-lg rellax" data-rellax-speed="5"></div>
+				<div class="footer-info small">
 				<div class="container">
 					<div class="row">
 						<div class="col-auto">
@@ -38,6 +40,8 @@
 					</div>
 				</div>
 			</div>
+			</div>
+			
 		</footer> <!-- end .site-footer -->
 		
 		<?php wp_footer(); ?>

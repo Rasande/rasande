@@ -1,7 +1,9 @@
 @import "base/variables";
+@import "base/mixins";
 
-@import "vendor/bootstrap/bootstrap.scss";
+//@import "vendor/bootstrap/bootstrap.scss";
 @import "vendor/hamburgers/hamburgers.scss";
+@import "vendor/pattern/pattern";
 
 @import "base/base";
 
@@ -13,11 +15,13 @@
 @import "module/banner";
 @import "module/blog";
 @import "module/brand";
+@import "module/page-header";
 @import "module/gallery";
 @import "module/nav";
 
 @import "wordpress";
 
+@import "state/align";
 @import "state/animation";
 
 @import "shame";

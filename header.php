@@ -24,20 +24,18 @@
 		<?php do_action( 'wp_body_open' ); ?>
 
 			<header class="site-header">
-				<nav class="navbar navbar-expand-md navbar-light">
+				<nav class="navbar">
 						<?php get_template_part( 'parts/navbar', 'brand' ); ?>
 						<?php get_template_part( 'parts/navbar', 'toggler' ); ?>
-					<div class="collapse navbar-collapse" id="navbar--main">
 					<?php wp_nav_menu( array( 
 						'theme_location' => 'primary', 
 						'container' => '',
-						'menu_class' => 'navbar-nav ml-auto',
+						'menu_class' => 'navbar-nav',
 						'depth' => 0,
 						'walker' => new Rasande_WP_Navwalker(),
 						'fallback_cb' => ''
 						 ) 
 					); ?>
-					</div>
 
 				</nav>
 			</header>

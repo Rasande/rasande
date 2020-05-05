@@ -16,7 +16,7 @@ get_header();
 	
 		    <main class="main">
                 <div class="container">
-                    <h1 class="font-weight-bold"><?php the_archive_title();?></h1>
+                <?php get_template_part( 'parts/page', 'header' ); ?>
                     </div>
                     <div class="container">
                         <div class="row">
@@ -24,13 +24,13 @@ get_header();
                                 <div class="blog">
                                 <div class="row">
                                     <?php if (have_posts()) : 
-$args = array(
-    'posts_per_page' => 9,
-    'post_status' => 'publish',
-    'post_type' => 'post',
-    'orderby' => 'post_date',
-);
-query_posts( $args );
+                                        $args = array(
+                                            'posts_per_page' => 3,
+                                            'post_status' => 'publish',
+                                            'post_type' => 'post',
+                                            'orderby' => 'post_date',
+                                        );
+                                        query_posts( $args );
                                          while (have_posts()) : the_post(); ?>
                                           <?php if (is_sticky()) :?>
                                             <div class="col-12">
@@ -50,6 +50,7 @@ query_posts( $args );
                                                                 echo category_description($category);
                                                             } ?>
                                                         </span>
+                                                        <?php the_excerpt(); ?>
                                                     </div>
                                                 </a>
                                                 </div>

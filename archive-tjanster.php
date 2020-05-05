@@ -13,7 +13,7 @@ get_header(); ?>
 	
 		    <main class="main">
                 <div class="container">
-                    <h1 class="display-1 font-weight-bold"><?php the_archive_title(); ?></h1>
+					<?php get_template_part( 'parts/page', 'header' ); ?>
                 </div>
 
 		    </main> 
