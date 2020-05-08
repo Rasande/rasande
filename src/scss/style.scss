@@ -18,10 +18,14 @@
 @import "module/page-header";
 @import "module/gallery";
 @import "module/nav";
+@import "module/social-media";
 
 @import "wordpress";
 
-@import "state/align";
 @import "state/animation";
+@import "state/flex";
+@import "state/spacing";
+@import "state/text";
+
 
 @import "shame";

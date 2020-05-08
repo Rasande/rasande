@@ -1,0 +1,81 @@
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+@include respond-above(xs) {
+    .text-center-xs {
+        text-align: center;
+    }
+    
+    .text-right-xs {
+        text-align: right;
+    }
+    
+    .text-left-xs {
+        text-align: left;
+    }
+}
+
+@include respond-above(sm) {
+    .text-center-sm {
+        text-align: center;
+    }
+    
+    .text-right-sm {
+        text-align: right;
+    }
+    
+    .text-left-sm {
+        text-align: left;
+    }
+}
+
+@include respond-above(md) {
+    .text-center-md {
+        text-align: center;
+    }
+    
+    .text-right-md {
+        text-align: right;
+    }
+    
+    .text-left-md {
+        text-align: left;
+    }
+}
+
+@include respond-above(lg) {
+    .text-center-lg {
+        text-align: center;
+    }
+    
+    .text-right-lg {
+        text-align: right;
+    }
+    
+    .text-left-lg {
+        text-align: left;
+    }
+}
+
+@include respond-above(xl) {
+    .text-center-xl {
+        text-align: center;
+    }
+    
+    .text-right-xl {
+        text-align: right;
+    }
+    
+    .text-left-xl {
+        text-align: left;
+    }
+}

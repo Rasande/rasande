@@ -15,7 +15,7 @@ $rasande_includes = array(
 	'/classes.php',
 	'/hooks.php',
 	'/widgets.php',
-	//'/acf.php',
+	'/acf.php',
 	//'/acf-blocks.php',
 	'/admin.php'
 );

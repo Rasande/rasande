@@ -1,5 +1,6 @@
 .site-footer {
-
+    font-size: 1.4rem;
+    font-weight: $font-weight-bold;
     .footer-cta {
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -31,7 +32,16 @@
         bottom: 0;
         width: 100%;
         padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
         color: $dark;
+    }
+    a {
+        display: block;
+        color: $body-color;
+        transition: transform .25s ease;
+        &:hover {
+            color: rgba($body-color, .85);
+            transform: translateY(-2px);
+        }
     }
 }

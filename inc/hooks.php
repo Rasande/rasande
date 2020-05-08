@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 if ( ! function_exists( 'rasande_copyright' )) {
     function rasande_copyright() { ?>
         <div class="copyright">
-            <small class="copyright-info">&copy; <?php echo bloginfo( 'name' ); ?> <?php echo date("Y"); ?></small>
+            <span class="copyright-info">&copy; <?php echo bloginfo( 'name' ); ?> <?php echo date("Y"); ?></span>
         </div>
    <?php }
 }
