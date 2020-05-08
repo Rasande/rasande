@@ -18,6 +18,9 @@ if ( ! function_exists( 'rasande_scripts' ) ) {
         //wp_register_script('isotope', 'https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js');
         //wp_enqueue_script('isotope');
 
+        wp_register_script('simple-parallax', 'https://cdn.jsdelivr.net/npm/simple-parallax-js@5.4.0/dist/simpleParallax.min.js');
+        wp_enqueue_script('simple-parallax');
+
         wp_register_script('rellax', 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js');
         wp_enqueue_script('rellax');
 

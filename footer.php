@@ -16,13 +16,14 @@
 		<footer class="site-footer">
 			<div class="footer-cta">
 				<div class="container">
-					<h4>Funderat klart?</h4>
-					Dags att ta tag i hemsidan
+		
 				</div>
 			</div>
 			<div class="footer-background">
 				<div class="test-shadow"></div>
-				<div class="test <?php echo $pattern[$rand_keys]; ?> rellax" data-rellax-speed="5"></div>
+				<div class="rellax" data-rellax-speed="1.8">
+				<div class="test <?php echo $pattern[$rand_keys]; ?>" ></div>
+</div>
 				<div class="footer-info">
 				<div class="container">
 					<div class="row reverse-md align-center">
@@ -32,7 +33,7 @@
 						<div class="col-xs-12 col-sm-6 col-md text-center text-left-md pt-1">	
 							<?php wp_nav_menu( array(
 									'theme_location'  => 'footer',
-									'container_class' => '',
+									'conter_class' => '',
 									'menu_class'      => 'footer-nav',
 									'items_wrap'      => '<ul class="%2$s">%3$s</ul>' ,
 									'fallback_cb'     => '',
@@ -52,10 +53,9 @@
 		
 		<?php wp_footer(); ?>
 		<script>
-			var rellax = new Rellax('.rellax', {
-  
-  bottom: true,
-  wrapper: '.footer-background'
+			const image = document.getElementsByClassName('test');
+new simpleParallax(image, {
+	scale: 3,
 });
 		</script>
 	</body>
