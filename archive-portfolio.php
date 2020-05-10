@@ -52,7 +52,7 @@ get_header(); ?>
                         while (have_posts()) : the_post(); ?>
 
                             <?php 
-                            $categories = get_the_terms( $post->ID, 'kundcase_category' );
+                            $categories = get_the_terms( $post->ID, 'portfolio_category' );
 
                             $output = '';
                             if ( ! empty( $categories ) ) {
@@ -66,7 +66,7 @@ get_header(); ?>
                             <div class="gallery-item <?php  echo trim( $output ); ?>">
                             <a href="<?php the_permalink(); ?>">
                                 <div class="gallery-item-wrapper">
-                                <div class="gallery-item-inner" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
+                                <div class="gallery-item-inner" data-tilt data-tilt-max="5" data-tilt-scale="1">
                                    
                                         <div class="gallery-item-content">
                                         <h2 class="name"><?php the_title();?></h2>
