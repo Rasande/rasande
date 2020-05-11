@@ -24,7 +24,7 @@ get_header(); ?>
                         if ( $terms && !is_wp_error( $terms ) ) :
                         ?>
                             <div class="btn-group btn-filter-group" role="group" aria-label="<?php __('Filter cases', 'rasande') ?>">
-                                <button type="button" class="btn btn-link selected" data-filter="*"><?php echo __('Show All', 'rasande'); ?></button>
+                                <button type="button" class="btn btn-link btn-filter selected" data-filter="*"><?php echo __('All', 'rasande'); ?></button>
 
 
                                 <?php foreach ( $terms as $term ) { ?>
@@ -33,7 +33,7 @@ get_header(); ?>
                                     $filterData = '.';
                                     $filterData .= $term->name; ?>
 
-                                    <button type="button" class="btn btn-link" data-filter="<?php echo strtolower($filterData); ?>"><?php echo $term->name; ?></button>
+                                    <button type="button" class="btn btn-link btn-filter" data-filter="<?php echo strtolower($filterData); ?>"><?php echo $term->name; ?></button>
                                 <?php } ?>
                             </div>
                         <?php endif;?>
@@ -66,7 +66,7 @@ get_header(); ?>
                             <div class="gallery-item <?php  echo trim( $output ); ?>">
                             <a href="<?php the_permalink(); ?>">
                                 <div class="gallery-item-wrapper">
-                                <div class="gallery-item-inner" data-tilt data-tilt-max="5" data-tilt-scale="1">
+                                <div class="gallery-item-inner" data-tilt data-tilt-max="5" data-tilt-scale="1.02">
                                    
                                         <div class="gallery-item-content">
                                         <h2 class="name"><?php the_title();?></h2>

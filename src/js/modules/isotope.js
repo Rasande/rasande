@@ -1,5 +1,13 @@
 jQuery(function ($) {
 
+  var $grid = $('.gallery').isotope({
+    itemSelector: '.gallery-item',
+    layoutMode: 'masonry',
+    masonry : {
+      gutter: '.gallery-item-gutter'
+    }
+  });
+  // filter functions
   var filterFns = {
     // show if number is greater than 50
     numberGreaterThan50: function() {
@@ -9,71 +17,24 @@ jQuery(function ($) {
     // show if name ends with -ium
     ium: function() {
       var name = $(this).find('.name').text();
-      console.log(name);
-      return name.match( /kes$/ );
-    
-    },
-    testFunc: function() {
-      var attr = $(this).hasClass('webbutveckling');
-      console.log(attr);
-      return attr;
-     
-    },
-    testSeo: function() {
-      var attr = $(this).hasClass('seo');
-      console.log(attr);
-      return attr;
-     
+      return name.match( /ium$/ );
     }
   };
-  
-  function getHashFilter() {
-    // get filter=filterName
-    var matches = location.hash.match( /([^&]+)/i );
-    var hashFilter = matches && matches[1];
-    return hashFilter && decodeURIComponent( hashFilter ).substr(1);
-  }
-  
-  // init Isotope
-  var $grid = $('.gallery');
-  
   // bind filter button click
-  var $filterButtonGroup = $('.btn-filter-group');
-  $filterButtonGroup.on( 'click', 'button', function() {
-    var filterAttr = $( this ).attr('data-filter');
-    // set filter in hash
-    location.hash = '' + encodeURIComponent( filterAttr );
+  $('.btn-filter-group').on( 'click', 'button', function() {
+    var filterValue = $( this ).attr('data-filter');
+    // use filterFn if matches value
+    filterValue = filterFns[ filterValue ] || filterValue;
+    $grid.isotope({ filter: filterValue });
   });
-  
-  var isIsotopeInit = false;
-  
-  function onHashchange() {
-    var hashFilter = getHashFilter();
-    if ( !hashFilter && isIsotopeInit ) {
-      return;
-    }
-    isIsotopeInit = true;
-    // filter isotope
-    $grid.isotope({
-      itemSelector: '.gallery-item',
-      layoutMode : 'masonry',
-      masonry : {
-        gutter : '.gallery-item-gutter'
-      },
-      // use filterFns
-      filter: filterFns[ hashFilter ] || hashFilter
+  // change selected class on buttons
+  $('.btn-group').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on( 'click', 'button', function() {
+      $buttonGroup.find('.selected').removeClass('selected');
+      $( this ).addClass('selected');
     });
-    // set selected class on button
-    if ( hashFilter ) {
-      $filterButtonGroup.find('.selected').removeClass('selected');
-      $filterButtonGroup.find('[data-filter="' + hashFilter + '"]').addClass('selected');
-    }
-  }
-  
-  $(window).on( 'hashchange', onHashchange );
-  
-  // trigger event handler to init Isotope
-  onHashchange();
+  });
   
   
 

@@ -14,8 +14,8 @@
 
         .test {
             height: 700px;
-            background-color: $primary;
-            color: lighten($primary, 10%);
+            background-color: $black;
+            color: lighten($black, 10%);
         }
 
         .test-shadow {
@@ -37,10 +37,10 @@
     }
     a {
         display: block;
-        color: $body-color;
+        color: $light;
         transition: transform .25s ease;
         &:hover {
-            color: rgba($body-color, .85);
+            color: rgba($light, .85);
             transform: translateY(-2px);
         }
     }

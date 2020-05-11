@@ -33,7 +33,7 @@ get_header();
                                         query_posts( $args );
                                          while (have_posts()) : the_post(); ?>
                                           <?php if (is_sticky()) :?>
-                                            <div class="col-12">
+                                            <div class="col-xs-12">
                                                 <div class="blog-item" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
                                                 <a class="blog-item-link" href="<?php the_permalink(); ?>">
                                                 <?php if ( has_post_thumbnail() ) {
@@ -56,7 +56,7 @@ get_header();
                                                 </div>
                                             </div>
                                           <?php else: ?>
-                                            <div class="col-6">
+                                            <div class="col-xs-12 col-sm-6">
                                                 <div class="blog-item" data-tilt data-tilt-max="5" data-tilt-scale="1.05"> 
                                                 <a class="blog-item-link" href="<?php the_permalink(); ?>">
                                                 <?php if ( has_post_thumbnail() ) {
