@@ -76,7 +76,7 @@
             text-decoration: none;
         }
         &.selected {
-            color: rgba(0, 0, 0, 0.5);
+            color: $nav-link-active-color;
             text-decoration: none;
         }
     }

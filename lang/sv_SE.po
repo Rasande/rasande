@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Rasande\n"
-"POT-Creation-Date: 2020-05-10 14:29+0200\n"
-"PO-Revision-Date: 2020-05-10 14:29+0200\n"
+"POT-Creation-Date: 2020-05-17 20:42+0200\n"
+"PO-Revision-Date: 2020-05-17 20:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -59,6 +59,22 @@ msgstr ""
 #: parts/navbar-toggler.php:12
 msgid "Toggle navigation"
 msgstr ""
+
+#: parts/portfolio-meta.php:23
+msgid "Customer: "
+msgstr "Kund: "
+
+#: parts/portfolio-meta.php:26
+msgid "In association with: "
+msgstr "I samarbete med: "
+
+#: parts/portfolio-meta.php:29
+msgid "On behalf of: "
+msgstr "På uppdrag av: "
+
+#: single-portfolio.php:56
+msgid "Related projects"
+msgstr "Liknande projekt"
 
 #. Theme Name of the plugin/theme
 msgid "Rasande"

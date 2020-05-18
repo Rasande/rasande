@@ -42,9 +42,16 @@
       }
 
       .dropdown-btn {
+        padding: 0 .8em;
+        border:none;
+        margin-bottom: 5px;
+        background: transparent;
         @include respond-above($navbar-expand) {
           display: none;
           visibility: hidden;
+        }
+        &.toggled i {
+          transform: rotate(-135deg);
         }
       }
 

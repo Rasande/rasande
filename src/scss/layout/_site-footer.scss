@@ -2,7 +2,7 @@
     font-size: 1.4rem;
     font-weight: $font-weight-bold;
     .footer-cta {
-        padding-top: 2rem;
+        padding-top: 5rem;
         padding-bottom: 2rem;
         text-align: center;
     }
@@ -14,8 +14,8 @@
 
         .test {
             height: 700px;
-            background-color: $black;
-            color: lighten($black, 10%);
+            background-color: $primary;
+            color: darken($primary, 10%);
         }
 
         .test-shadow {

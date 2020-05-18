@@ -1,6 +1,7 @@
 .blog {
 
     &-item {
+        margin-bottom: 2em;
         &:hover {
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
@@ -14,5 +15,21 @@
                 height: auto;
             }
         }
+        &-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 99px;
+            padding: 1em .8em;
+            h2 {
+                font-size: 1.6rem;
+                text-align: center;
+            }
+        }
+    }
+    &-date {
+        display: block;
+        color: lighten($dark, 55%);
+        text-align: center;
     }
 }

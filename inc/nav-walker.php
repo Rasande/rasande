@@ -11,7 +11,7 @@ if ( ! class_exists( 'Rasande_WP_Navwalker' ) ) {
     class Rasande_WP_Navwalker extends Walker_Nav_Menu {
         public function start_lvl(&$output, $depth = 0, $args = array()) {
             $indent = str_repeat("\t", $depth);
-            $output .= "\n$indent<button class=\"dropdown-btn \" type=\"button\"><i class=\"fa fa-angle-down\"></i></button>\n";
+            $output .= "\n$indent<button class=\"dropdown-btn \" type=\"button\"><i class=\"icon-arrow-down\"></i></button>\n";
         
             parent::start_lvl($html, $depth, $args);
             $html = str_replace('sub-menu', 'dropdown-menu', $html);

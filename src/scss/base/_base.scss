@@ -240,6 +240,8 @@ figure {
 //
 
 img {
+    width: 100%;
+    height: auto;
     vertical-align: middle;
     border-style: none;
 }
@@ -275,7 +277,7 @@ th {
 
 label {
     // Allow labels to use `margin` for spacing.
-    display: inline-block;
+    display: block;
     margin-bottom: $label-margin-bottom;
 }
 
@@ -298,13 +300,22 @@ textarea {
     line-height: inherit;
 }
 
+input, textarea {
+    width: 100%;
+}
+
 button,
 input {
     overflow: visible;
 }
 
+input[type="submit"] {
+    width: auto;
+}
+
 button,
 select {
+
     text-transform: none;
 }
 

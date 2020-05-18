@@ -25,7 +25,7 @@ get_header();
                                 <div class="row">
                                     <?php if (have_posts()) : 
                                         $args = array(
-                                            'posts_per_page' => 3,
+                                            'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
                                             'post_status' => 'publish',
                                             'post_type' => 'post',
                                             'orderby' => 'post_date',
@@ -34,14 +34,14 @@ get_header();
                                          while (have_posts()) : the_post(); ?>
                                           <?php if (is_sticky()) :?>
                                             <div class="col-xs-12">
-                                                <div class="blog-item" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
+                                                <div class="blog-item" data-tilt data-tilt-max="5" data-tilt-scale="1.02">
                                                 <a class="blog-item-link" href="<?php the_permalink(); ?>">
                                                 <?php if ( has_post_thumbnail() ) {
                                                         the_post_thumbnail('blog-sticky');
                                                         } else { ?>
                                                         <img class="blog-item-thumbnail" src="<?php bloginfo('template_directory'); ?>/assets/img/default-blog-sticky.jpg" alt="<?php the_title(); ?>" />
                                                     <?php } ?>
-                                                    <div class="entry-header">
+                                                    <div class="blog-item-info">
                                                         <h2 class="font-weight-bold"><?php the_title(); ?></h2>
                                                         <span><?php echo get_the_date('d/m Y') ?></span>
                                                         <span>
@@ -56,23 +56,17 @@ get_header();
                                                 </div>
                                             </div>
                                           <?php else: ?>
-                                            <div class="col-xs-12 col-sm-6">
-                                                <div class="blog-item" data-tilt data-tilt-max="5" data-tilt-scale="1.05"> 
+                                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                                <div class="blog-item" data-tilt data-tilt-max="5" data-tilt-scale="1.02"> 
                                                 <a class="blog-item-link" href="<?php the_permalink(); ?>">
                                                 <?php if ( has_post_thumbnail() ) {
                                                         the_post_thumbnail('blog-item');
                                                         } else { ?>
                                                         <img class="blog-item-thumbnail" src="<?php bloginfo('template_directory'); ?>/assets/img/default-blog.jpg" alt="<?php the_title(); ?>" />
                                                     <?php } ?>
-                                                    <div class="entry-header">
+                                                    <div class="blog-item-info">
                                                         <h2 class="font-weight-bold"><?php the_title(); ?></h2>
-                                                        <span><?php echo get_the_date('d/m Y') ?></span>
-                                                        <span>
-                                                            <?php foreach((get_the_category()) as $category){
-                                                                echo $category->name."<br>";
-                                                                echo category_description($category);
-                                                            } ?>
-                                                        </span>
+                                                        <span class="blog-date"><?php echo get_the_date('d/m Y') ?></span>
                                                     </div>
                                                 </a>
                                                 </div>
@@ -82,16 +76,11 @@ get_header();
                                     <?php endif; ?>
                                     </div>
                                 </div> <!-- entries -->
+                                <nav class="pagination">
+                                    <span class="pagination-prev"><?php previous_posts_link(); ?></span>
+                                    <span class="pagination-next"><?php next_posts_link(); ?></span>
+                                </nav>
                             </div><!-- col -->
-                            <div class="col-3">
-                            <aside class="sidebar">
-                                <?php if ( is_active_sidebar('blog-sidebar')) : ?>
-                                    <ul id="sidebar">
-                                        <?php dynamic_sidebar( 'blog-sidebar' ); ?>
-                                    </ul>
-                                <?php endif; ?>
-                            </aside>
-                            </div>
                         </div> <!-- row -->
                 </div> <!-- container -->
 		    </main> 
