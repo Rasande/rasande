@@ -3,26 +3,39 @@
     &-item {
         box-sizing: border-box;
         //padding: 1em;
-        margin-bottom: 5%;
+        margin-bottom: 10%;
         width: 100%;
         z-index: 40;
         transition: box-shadow .15s ease;
-        &:hover {
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+        @include respond-above(sm) {
+            width: 48%;
+            margin-bottom: 4%;
+            &-sizer {
+                width: 48%; 
+            }
+            &-gutter {
+                width: 4%;
+            }
         }
-        @media only screen and (min-width: 800px) {
-            width: 30%;
 
+        @include respond-above(lg) {
+            width: 30%;
+            margin-bottom: 5%;
+            &-sizer {
+                width: 30%; 
+            }
+            &-gutter {
+                width: 5%;
+            }
         }
-        &-sizer {
-            width: 30%; 
-        }
-        &-gutter {
-            width: 5%;
-        }
+
+
         img {
             width: 100%;
             height: auto;
+            &:hover {
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+            }
         }
         &-wrapper {
             position: relative;
@@ -51,6 +64,7 @@
 .gallery-filter {
     text-align: center;
     padding: 0 0 2em ;
+    font-size: 1.2  rem;
     button {
         transition: transform .25s ease;
         color: $dark;
@@ -58,11 +72,11 @@
         text-transform: uppercase;
         transition: color .25s ease;
         &:hover {
-            color: rgba(0, 0, 0, 0.75);
+            color: $primary;
             text-decoration: none;
         }
         &.selected {
-            color: rgba(0, 0, 0, 0.5);
+            color: $nav-link-active-color;
             text-decoration: none;
         }
     }

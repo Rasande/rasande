@@ -33,7 +33,8 @@
 						'menu_class' => 'navbar-nav',
 						'depth' => 0,
 						'walker' => new Rasande_WP_Navwalker(),
-						'fallback_cb' => ''
+						'fallback_cb' => '',
+						'depth' => '2'
 						 ) 
 					); ?>
 

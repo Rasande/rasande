@@ -52,3 +52,6 @@ if ( ! function_exists( 'rasande_svg_attr' ) ) {
     }
     add_filter( 'image_downsize', 'rasande_svg_attr', 10, 2 ); 
 }
+
+// Odd or even
+$odd_or_even = 'odd';

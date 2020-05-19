@@ -42,9 +42,16 @@
       }
 
       .dropdown-btn {
+        padding: 0 .8em;
+        border:none;
+        margin-bottom: 5px;
+        background: transparent;
         @include respond-above($navbar-expand) {
           display: none;
           visibility: hidden;
+        }
+        &.toggled i {
+          transform: rotate(-135deg);
         }
       }
 
@@ -189,4 +196,18 @@
   @include respond-above($navbar-expand) {
     display: flex;
   }
+}
+
+// 
+// Footer navigation
+//
+
+.footer-nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+    .menu-item {
+      display: inline-block;
+      padding: 0 .5rem;
+    }
 }

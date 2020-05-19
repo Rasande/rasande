@@ -1,0 +1,11 @@
+.icon-arrow-down {
+
+        border: solid $hamburger-layer-color;
+        border-width: 0 $hamburger-layer-height $hamburger-layer-height 0;
+        border-radius: 2px;
+        padding: $hamburger-layer-height;
+        display: inline-block;
+        transform: rotate(45deg);
+        transition: transform .25s ease;
+        
+}

@@ -42,7 +42,7 @@ $colors: map-merge(
   $colors
 );
 
-$primary: #cc5252 !default;
+$primary: #e66262 !default;
 $secondary: $gray-800 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -131,7 +131,9 @@ $table-caption-color:         $text-muted !default;
 
 // Forms
 $label-margin-bottom:                   .5rem !default;
-
+$label-font-family: $headings-font-family;
+$label-color: $body-color;
+$label-color-focused: $gray-500;
 
 // Navbar
 $navbar-font-family: $headings-font-family;

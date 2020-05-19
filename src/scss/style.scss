@@ -15,13 +15,25 @@
 @import "module/banner";
 @import "module/blog";
 @import "module/brand";
-@import "module/page-header";
+@import "module/buttons";
 @import "module/gallery";
 @import "module/nav";
+@import "module/icons";
+@import "module/page-header";
+@import "module/pagination";
+@import "module/portfolio";
+@import "module/related-posts";
+@import "module/services";
+@import "module/social-media";
 
 @import "wordpress";
 
-@import "state/align";
+@import "plugins/cf7";
+
 @import "state/animation";
+@import "state/flex";
+@import "state/spacing";
+@import "state/text";
+
 
 @import "shame";
