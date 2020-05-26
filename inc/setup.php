@@ -26,8 +26,9 @@ if ( ! function_exists( 'rasande_theme_support' )) {
         // Add image sizes
         add_image_size( 'icon', 50, 50, true );
         add_image_size( 'gallery-item', 510 ); 
-        add_image_size( 'blog-item', 400, 250, array('center','center'));
-        add_image_size( 'blog-sticky', 800, 250, array('center','center'));
+        add_image_size( 'blog-item', 310, 195, array('center','center'));
+        add_image_size( 'service-item', 466, 500, array('center', 'center'));
+        add_image_size( 'page-header', 1075, 600, array('center', 'center'));
 
         // Add support for responsive embedded content
         add_theme_support( 'responsive-embeds' );

@@ -1,6 +1,29 @@
-.btn {
+.btn, a.btn {
+    width: fit-content;
+    padding: 5px 2em;
+    border:none;
+    border-radius: .5em;
+    transition: background-color .25s ease, transform .25s ease;
+
+
+
+    // Make button lika like a link
     &-link {
+        padding: 0;
         border: none;
         background: transparent;
+    }
+    // Primary button
+    &-primary {
+        color: $white;
+        background-color: $primary;
+        //box-shadow: $primary;
+        &:hover, &:focus {
+            background-color: darken($primary, 5%);
+        }
+        &:active {
+            background-color: darken($primary, 10%);
+            transform: translateY(3px);
+        }
     }
 }

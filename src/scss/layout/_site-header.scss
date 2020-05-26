@@ -12,7 +12,7 @@
         pointer-events: all;
     }
     &.expanded {
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: $dropdown-bg;
         height: 100vh;
     }
 }

@@ -42,7 +42,7 @@ $colors: map-merge(
   $colors
 );
 
-$primary: #e66262 !default;
+$primary: #2fe7aa !default;
 $secondary: $gray-800 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -82,11 +82,11 @@ $breakpoints: (
 );
 
 // Fonts
-$font-family-sans-serif: 'Open Sans', sans-serif !default;
+$font-family-sans-serif: 'Roboto', sans-serif !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-sans-serif !default;
 
-$font-size-base:              1.6rem !default;
+$font-size-base:              1.4rem !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 
@@ -101,7 +101,7 @@ $line-height-base:            1.5 !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        'Montserrat', sans-serif !default;
-$headings-font-weight:        $font-weight-bold !default;
+$headings-font-weight:        $font-weight-normal !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              $dark !default;
 
@@ -137,7 +137,7 @@ $label-color-focused: $gray-500;
 
 // Navbar
 $navbar-font-family: $headings-font-family;
-$navbar-font-size: 1.4rem !default;
+$navbar-font-size: 1.2rem !default;
 
 $navbar-padding-y:                  $spacer / 2 !default;
 $navbar-padding-x:                  $spacer !default;
@@ -154,11 +154,11 @@ $nav-item-spacing: $spacer * 1.5;
 $nav-link-color: $body-color;
 $nav-link-hover-color: $primary;
 $nav-link-active-color: rgba($nav-link-color, .5);
-$nav-link-padding-y:.5rem !default; 
-$nav-link-padding-x:1rem !default;
+$nav-link-padding-y: 1rem !default; 
+$nav-link-padding-x: 2.5rem !default;
 
 $dropdown-font-size: $navbar-font-size;
-$dropdown-bg: rgba(255, 255, 255, 1);
+$dropdown-bg: rgba(255, 255, 255, .96);
 
 // Hamburger Icon
 $hamburger-padding-x: 0;

@@ -1,6 +1,14 @@
 .page-header {
-    padding: 4em 0;
+    padding: 4em 0 6em;
     h1.page-title {
+        margin-bottom: 2em;
+        //color: $gray-300;
         text-align: center;
+    }
+    &-img {
+        img {
+            max-height: 600px;
+            object-fit: cover;
+        }
     }
 }

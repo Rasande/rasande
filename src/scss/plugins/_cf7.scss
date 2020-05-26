@@ -41,16 +41,17 @@ form.wpcf7-form {
     }
     input, textarea {
         border: none;
-        border-bottom: solid 1px;
+        border-bottom: solid 1px $gray-400;
         }
     input[type="submit"] {
-        width: fit-content;
+        @extend .btn;
+        @extend .btn-primary;
+        margin: 2em auto 0;
     }
     input:focus, textarea:focus {
         outline: none;
     }
 }
-
 
 span .wpcf7-not-valid {
     border-bottom: 1px solid $danger !important;
