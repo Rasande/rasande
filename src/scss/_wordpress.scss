@@ -3,3 +3,21 @@
 	max-width: 100vw;
 	width: 100vw;
 }
+
+
+// Wordpress Block editor styles
+
+/* Main column width */
+.wp-block {
+    max-width: $container-width;
+}
+ 
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+    max-width: $container-wide-width;
+}
+ 
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+    max-width: none;
+}

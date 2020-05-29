@@ -17,7 +17,6 @@ defined( 'ABSPATH' ) || exit;
     <?php else :?>
     <h1 class="page-title"><?php the_title();?></h1>
     <?php endif; ?>
-    <?php get_template_part( 'parts/portfolio', 'meta' ) ?>
 
 </div>
 

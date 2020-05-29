@@ -5,4 +5,28 @@
         padding-top: 1em;
         padding-bottom: 1em;
     }
+    &-item {
+        position: relative;
+        transition: box-shadow .25s ease;
+        box-shadow: 0 25px 50px -12px rgba(0,0,0,0);
+        transform-style: preserve-3d;
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+        &:hover {
+            box-shadow: 0 25px 50px -12px $boxshadow-color;
+
+
+        }
+    &-content {
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+        padding: .5em 1em;
+        transform: translateZ(40px);
+        box-shadow: 0 25px 50px -12px $boxshadow-color;
+        h2 {
+            font-size: 2rem;
+            color: $dark;
+        }
+    }
+    }
 }

@@ -19,8 +19,7 @@ get_header();
                 <?php get_template_part( 'parts/page', 'header' ); ?>
                     </div>
                     <div class="container">
-                        <div class="row">
-                            <div class="col-9">
+
                                 <div class="blog">
                                 <div class="row">
                                     <?php if (have_posts()) : 
@@ -72,7 +71,11 @@ get_header();
                                                 </div>
                                             </div>
                                             <?php endif; ?>
-                                        <?php endwhile; ?>	
+                                        <?php endwhile; ?>
+                                    <?php else : ?>
+                                        <div class="col-xs-12">
+                                        <p class="text-center color-gray-500"><?php echo __('Here it was empty, new posts coming soon!','rasande') ?></p>
+                                        </div>
                                     <?php endif; ?>
                                     </div>
                                 </div> <!-- entries -->
@@ -80,8 +83,8 @@ get_header();
                                     <span class="pagination-prev"><?php previous_posts_link(); ?></span>
                                     <span class="pagination-next"><?php next_posts_link(); ?></span>
                                 </nav>
-                            </div><!-- col -->
-                        </div> <!-- row -->
+                            </div><!-- row -->
+                        </div> <!-- blog -->
                 </div> <!-- container -->
 		    </main> 
 	</div> 

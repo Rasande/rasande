@@ -42,7 +42,7 @@ $colors: map-merge(
   $colors
 );
 
-$primary: #2fe7aa !default;
+$primary: #ffa600 !default;
 $secondary: $gray-800 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -69,6 +69,8 @@ $theme-colors: map-merge(
 $body-bg:                   $white !default;
 $body-color:                $dark !default;
 
+$boxshadow-color: rgba($dark, .25);
+
 // Spacing 
 $spacer: 1rem !default;
 
@@ -86,7 +88,7 @@ $font-family-sans-serif: 'Roboto', sans-serif !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-sans-serif !default;
 
-$font-size-base:              1.4rem !default;
+$font-size-base:              1.8rem !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 
@@ -137,7 +139,7 @@ $label-color-focused: $gray-500;
 
 // Navbar
 $navbar-font-family: $headings-font-family;
-$navbar-font-size: 1.2rem !default;
+$navbar-font-size: 1.3rem !default;
 
 $navbar-padding-y:                  $spacer / 2 !default;
 $navbar-padding-x:                  $spacer !default;
@@ -149,7 +151,7 @@ $brand-width: 60px;
 $brand-width-small: 90px;
 
 // Navigation
-$nav-item-spacing: $spacer * 1.5;
+$nav-item-spacing: $spacer * 1.2;
 
 $nav-link-color: $body-color;
 $nav-link-hover-color: $primary;

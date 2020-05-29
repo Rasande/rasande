@@ -6,7 +6,7 @@
         margin-bottom: 10%;
         width: 100%;
         z-index: 40;
-        transition: box-shadow .15s ease;
+        
         @include respond-above(sm) {
             width: 48%;
             margin-bottom: 4%;
@@ -18,24 +18,12 @@
             }
         }
 
-        @include respond-above(lg) {
-            width: 30%;
-            margin-bottom: 5%;
-            &-sizer {
-                width: 30%; 
-            }
-            &-gutter {
-                width: 5%;
-            }
-        }
+
 
 
         img {
             width: 100%;
             height: auto;
-            &:hover {
-                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
-            }
         }
         &-wrapper {
             position: relative;
@@ -44,6 +32,11 @@
         &-inner {
             transform-style: preserve-3d;
             transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+            transition: box-shadow .25s ease;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0);
+            &:hover {
+                box-shadow: 0 25px 50px -12px $boxshadow-color;
+            }
         }
         &-content {
             background-color: #fff;
@@ -51,10 +44,13 @@
             bottom: 0;
             padding: .5em 1em;
             transform: translateZ(40px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 25px 50px -12px $boxshadow-color;
             h2 {
                 font-size: 2rem;
                 color: $dark;
+                @include respond-above(md) {
+                    font-size: 3rem;
+                }
             }
         }
     }
@@ -64,15 +60,16 @@
 .gallery-filter {
     text-align: center;
     padding: 0 0 2em ;
-    font-size: 1.2  rem;
+    font-size: $navbar-font-size;
+    font-family: $navbar-font-family;
     button {
         transition: transform .25s ease;
         color: $dark;
-        font-weight: 800;
-        text-transform: uppercase;
-        transition: color .25s ease;
+        transition: color .25s ease, transform .25s ease;
+        
         &:hover {
             color: $primary;
+            transform: translateY(-2px);
             text-decoration: none;
         }
         &.selected {
@@ -85,9 +82,6 @@
 .btn-filter-group {
     flex-wrap: wrap;
     button {
-        margin-right: 1em;
-        &:last-of-type {
-            margin-right: 0;
-        }
+        margin: .2em 1em;
     }
 }

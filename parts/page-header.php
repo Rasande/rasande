@@ -22,4 +22,9 @@ defined( 'ABSPATH' ) || exit;
     <h1 class="page-title"><?php the_title();?></h1>
     <?php endif; ?>
 <?php endif; ?>
+<?php if(get_field('custom_lead')) : ?>
+    <?php $lead = get_field('custom_lead'); ?>
+
+    <span class="lead"><?php echo $lead ?></span>
+<?php endif; ?>
 </div>

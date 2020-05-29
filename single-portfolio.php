@@ -28,7 +28,8 @@ get_header(); ?>
                                 
                     <?php endwhile; ?>	
                     
-				<?php endif; ?>
+                <?php endif; ?>
+                <?php get_template_part( 'parts/portfolio', 'meta' ) ?>
                 </div>
             </main> 
             
@@ -61,11 +62,17 @@ get_header(); ?>
 
                         <div class="col-xs-12 col-sm-4">
                             <a href="<?php the_permalink(); ?>">
-                        <?php if ( has_post_thumbnail() ) {
-                                                        the_post_thumbnail('blog-item');
-                                                        } else { ?>
-                                                        <img class="blog-item-thumbnail" src="<?php bloginfo('template_directory'); ?>/assets/img/default-blog.jpg" alt="<?php the_title(); ?>" />
-                                                    <?php } ?>
+                                <div class="related-posts-item" data-tilt data-tilt-max="5" data-tilt-scale="1.02">
+                                <div class="related-posts-item-content">
+                                        <h2 class="name"><?php the_title();?></h2>
+                                            
+                                        </div>
+                                    <?php if ( has_post_thumbnail() ) {
+                                        the_post_thumbnail('blog-item');
+                                    } else { ?>
+                                    <img class="blog-item-thumbnail" src="<?php bloginfo('template_directory'); ?>/assets/img/default-blog.jpg" alt="<?php the_title(); ?>" />
+                                    <?php } ?>
+                                </div>
                             </a>
                         </div>
 

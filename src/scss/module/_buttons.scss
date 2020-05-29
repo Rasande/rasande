@@ -2,9 +2,8 @@
     width: fit-content;
     padding: 5px 2em;
     border:none;
-    border-radius: .5em;
-    transition: background-color .25s ease, transform .25s ease;
-
+    transition: background-color .25s ease, transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    font-weight: bold;
 
 
     // Make button lika like a link
@@ -15,13 +14,17 @@
     }
     // Primary button
     &-primary {
-        color: $white;
-        background-color: $primary;
-        //box-shadow: $primary;
+        border: solid $dark 3px;
+        color: $dark;
+        background-color: $body-bg;
+        box-shadow: 0 25px 50px -12px rgba(0,0,0,0);
         &:hover, &:focus {
-            background-color: darken($primary, 5%);
+            border-color: $primary;
+            background-color: $primary;
+            box-shadow: 0 25px 50px -12px $boxshadow-color;
         }
         &:active {
+            border-color: darken($primary, 10%);
             background-color: darken($primary, 10%);
             transform: translateY(3px);
         }

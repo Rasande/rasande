@@ -84,8 +84,11 @@ get_header(); ?>
                             </div>
                                     
                         <?php endwhile; ?>	
+                    <?php else : ?>
 
-                        <?php endif; ?>
+                        <p class="text-center color-gray-500"><?php echo __('Here it was empty, new projects coming soon!','rasande') ?></p>
+
+                    <?php endif; ?>
 
                     </div>
                 </div>

@@ -3,6 +3,8 @@
         display: flex;
         justify-content: space-between;
         justify-items: center;
+        padding: 2em;
+        box-shadow: 0 25px 50px -12px $boxshadow-color;
         span {
             display: block;
         }

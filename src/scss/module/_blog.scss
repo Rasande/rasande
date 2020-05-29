@@ -2,8 +2,11 @@
 
     &-item {
         margin-bottom: 2em;
+        transition: box-shadow .25s ease;
+        box-shadow: 0 25px 50px -12px rgba(0,0,0,0);
         &:hover {
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 25px 50px -12px $boxshadow-color;
+
 
         }
         img.blog-item-thumbnail {

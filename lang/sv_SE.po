@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Rasande\n"
-"POT-Creation-Date: 2020-05-17 20:42+0200\n"
-"PO-Revision-Date: 2020-05-17 20:42+0200\n"
+"POT-Creation-Date: 2020-05-29 20:00+0200\n"
+"PO-Revision-Date: 2020-05-29 20:00+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -24,33 +24,59 @@ msgstr ""
 
 #: archive-portfolio.php:26
 msgid "Filter cases"
-msgstr ""
+msgstr "Filtrera projekt"
 
 #: archive-portfolio.php:27
 msgid "All"
 msgstr "Alla"
 
+#: archive-portfolio.php:89
+msgid "Here it was empty, new projects coming soon!"
+msgstr "Här var det tomt, nya projekt kommer snart!"
+
+#: archive-tjanster.php:57
+msgid "Read More"
+msgstr "Läs Mer"
+
+#: archive-tjanster.php:70
+msgid "Here it was empty, new services coming soon!"
+msgstr "Här var det tomt, nya tjänster kommer snart!"
+
+#: home.php:77
+msgid "Here it was empty, new posts coming soon!"
+msgstr "Här var det tomt, nya inlägg kommer snart!"
+
+#: inc/acf-blocks.php:16
+msgid "Social Icons"
+msgstr "Sociala Ikoner"
+
+#: inc/acf-blocks.php:17
+msgid "Display social media icons."
+msgstr "Visa social media ikoner."
+
 #: inc/acf.php:6 inc/acf.php:7
 msgid "Theme settings"
 msgstr "Tema inställningar"
 
+#: inc/editor.php:10
+msgid "Custom Blocks"
+msgstr "Anpassade Block"
+
 #: inc/nav-walker.php:105
 msgid "Add a menu"
-msgstr ""
-
-#: inc/setup.php:55
-msgid "Primary Menu"
-msgstr ""
+msgstr "Lägg till meny"
 
 #: inc/setup.php:56
+msgid "Primary Menu"
+msgstr "Primär meny"
+
+#: inc/setup.php:57
 msgid "Footer Menu"
-msgstr ""
+msgstr "Fotmeny"
 
 #: inc/widgets.php:14
-#, fuzzy
-#| msgid "Right Sidebar"
 msgid "Blog Sidebar"
-msgstr "Höger sidofält"
+msgstr "Höger Sidofält"
 
 #: inc/widgets.php:22
 msgid "Footer 1"
@@ -58,7 +84,7 @@ msgstr ""
 
 #: parts/navbar-toggler.php:12
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Öppna navigation"
 
 #: parts/portfolio-meta.php:23
 msgid "Customer: "
@@ -72,7 +98,7 @@ msgstr "I samarbete med: "
 msgid "On behalf of: "
 msgstr "På uppdrag av: "
 
-#: single-portfolio.php:56
+#: single-portfolio.php:57
 msgid "Related projects"
 msgstr "Liknande projekt"
 

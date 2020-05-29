@@ -54,7 +54,7 @@ get_header(); ?>
                                         <div class="service-item-content">
                                             <h2 class="name"><?php the_title();?></h2>
 										    <p><?php the_excerpt(); ?></p>
-                                            <a class="btn btn-primary" href="<?php the_permalink(); ?>">Read more</a>
+                                            <a class="btn btn-primary" href="<?php the_permalink(); ?>"><?php echo __('Read More', 'rasande');?></a>
                                         </div>
                                     </div>
                                 
@@ -65,6 +65,9 @@ get_header(); ?>
                                     
                         <?php endwhile; ?>	
 
+                        <?php else : ?>
+
+                            <p class="text-center color-gray-500"><?php echo __('Here it was empty, new services coming soon!','rasande') ?></p>
                         <?php endif; ?>
 
                     </div>
