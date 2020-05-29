@@ -12,9 +12,7 @@ defined( 'ABSPATH' ) || exit;
 <div class="grid-container">
     <div class="grid-x align-center align-middle">
         <div class="cell medium-6">
-            <h1 class="display bold"><?php the_title(); ?></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="">Call to action</a>
+    
         </div>
         <div class="cell shrink text-right">
         <?php 
