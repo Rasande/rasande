@@ -9,20 +9,18 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <div class="hero">
-<div class="grid-container">
-    <div class="grid-x align-center align-middle">
-        <div class="cell medium-6">
-    
-        </div>
-        <div class="cell shrink text-right">
-        <?php 
-$image = get_field('hero_img');
-if( !empty( $image ) ): ?>
-    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-<?php endif; ?>
+    <div class="row align-center">
 
+        <div class="col-xs-12 col-md-6">
+            <h1 class="page-title">Andreas Jansson</h1>
+            <div class="lead">
+                <p>Andreas Jansson, frilansande utvecklare och designer i Uppsala.</p>
+            </div>
         </div>
+
+        <div class="col-xs-12 col-md-6">
+            <img src="http://localhost/rasandese/wp-content/uploads/2020/04/ommiginspopic-500x466.jpg" alt="">
+        </div>
+
     </div>
-</div>
-
 </div>

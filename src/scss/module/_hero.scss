@@ -1,0 +1,39 @@
+.hero {
+    height: 100vh;
+    min-height: 200px;
+    padding: 4em 0 2em;
+    @include respond-above(xs) {
+        padding: 4em 0 4em;
+    }
+    @include respond-above(md) {
+        padding: 4em 0 6em;
+    }
+    h1.page-title {
+        margin-bottom: .4em;
+        font-size: 38px;
+        font-weight: bold;
+        line-height: 1;
+        text-align: center;
+
+        @include respond-above(xs) {
+            font-size: 56px;
+        }
+        @include respond-above(sm) {
+            font-size: 76px;
+        }
+        @include respond-above(md) {
+            font-size: 110px;
+            text-align: left;
+        }
+    }
+
+    &-img {
+        img {
+            max-height: 600px;
+            object-fit: cover;
+        }
+    }
+    .row {
+        height: 100%;
+    }
+}
