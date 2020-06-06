@@ -49,7 +49,7 @@ $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$dark:          $gray-900 !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
@@ -66,7 +66,7 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
-$body-bg:                   $white !default;
+$body-bg:                   #f5f6f7 !default;
 $body-color:                $dark !default;
 
 $boxshadow-color: rgba($dark, .25);
@@ -79,16 +79,16 @@ $breakpoints: (
   xs: 576px,
   sm: 814px,
   md: 992px,
-  lg: 1380px,
-  xl: 1500px
+  lg: 1480px,
+  xl: 1600px
 );
 
 // Fonts
-$font-family-sans-serif: 'Roboto', sans-serif !default;
+$font-family-sans-serif: 'Poppins', sans-serif !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-sans-serif !default;
 
-$font-size-base:              1.8rem !default;
+$font-size-base:              2.2rem !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 
@@ -102,7 +102,7 @@ $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
-$headings-font-family:        'Montserrat', sans-serif !default;
+$headings-font-family:        'Poppins', sans-serif !default;
 $headings-font-weight:        $font-weight-normal !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              $dark !default;
@@ -170,8 +170,8 @@ $hamburger-layer-height : 3px;
 $hamburger-layer-color: #212529;
 
 // Containers
-$container-width: map-get($breakpoints, "md");
-$container-wide-width: map-get($breakpoints, "lg");
+$container-width: map-get($breakpoints, "lg");
+$container-wide-width: map-get($breakpoints, "xl");
 
 // Grid
 $grid-gutter-width: 2rem !default;
