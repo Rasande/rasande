@@ -1,14 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  var waypoint = new Waypoint({
-    element: document.querySelector('.wpcf7-form'),
-    handler: function (direction) {
-      //alert('You have scrolled to a thing');
-      this.destroy()
-    },
-    offset: '75%',
-  });
+  // Execute on scroll
+  var selection = document.querySelector('.entry-content p') !== null;
+  if (selection) {
+    var waypoint = new Waypoint({
+      element: document.querySelector('.entry-content p'),
+      handler: function (direction) {
+  
+        this.destroy()
+      },
+      offset: '5%',
+    });
+  }
 
+  // Execute on load
+  anime({
+    targets: '.entry-content p',
+    opacity: [0,1],
+    translateX: [250,0],
+    delay: 300
+  });
+  anime({
+    targets: '.single-letter',
+    translateY: [-250,0],
+    opacity: [0,1],
+    delay: anime.stagger(100) 
+  })
 })
 
 
@@ -70,3 +87,34 @@ document.addEventListener('input', function (event) {
 if (event.target.tagName.toLowerCase() !== 'textarea') return;
 autoExpand(event.target);
 }, false);
+
+
+(function($) {
+// Go through a sentence, wrap its characters with spans
+function setUpCharacters() {
+  var $sentences = $('.page-title');
+
+  // Run for each sentence
+  $sentences.each(function() {
+    var $sentence = $(this);
+    var newContent = '';
+
+    // Go through all characters of the sentence
+    for (i = 0; i < $sentence.text().length; i++) {
+      var substring = $sentence.text().substr(i, 1);
+
+      // If we have a character, wrap it
+      if (substring != " ") {
+        newContent += '<span class="single-letter">' + substring + '</span>';
+      } else {
+        newContent += substring;
+      } 
+    }
+
+    // Replace content
+    $sentence.html(newContent); 
+  });
+}
+
+setUpCharacters();
+})( jQuery );
