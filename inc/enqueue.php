@@ -15,14 +15,14 @@ if ( ! function_exists( 'rasande_scripts' ) ) {
 		wp_enqueue_style( 'rasande-styles', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0' );
 
         // Load scripts
-        //wp_register_script('isotope', 'https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js');
-        //wp_enqueue_script('isotope');
+        wp_register_script('anime', get_template_directory_uri() . '/assets/js/vendor/anime.min.js', array(), false, true);
+        wp_enqueue_script('anime');
 
-        wp_register_script('simple-parallax', 'https://cdn.jsdelivr.net/npm/simple-parallax-js@5.4.0/dist/simpleParallax.min.js');
-        wp_enqueue_script('simple-parallax');
+        wp_register_script('isotope', get_template_directory_uri() . '/assets/js/vendor/isotope.pkgd.js', array('jquery'), false, true);
+        wp_enqueue_script('isotope');
 
-        wp_register_script('rellax', 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js');
-        wp_enqueue_script('rellax');
+        wp_register_script('waypoints', get_template_directory_uri() . '/assets/js/vendor/noframework.waypoints.min.js', array(), false, true);
+        wp_enqueue_script('waypoints');
 
         wp_enqueue_script( 'rasande-scripts', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), '1.0.0', true );
         

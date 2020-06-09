@@ -160,7 +160,7 @@ $nav-link-padding-y: 1rem !default;
 $nav-link-padding-x: 2.5rem !default;
 
 $dropdown-font-size: $navbar-font-size;
-$dropdown-bg: rgba(255, 255, 255, .96);
+$dropdown-bg: rgba($body-bg, .96);
 
 // Hamburger Icon
 $hamburger-padding-x: 0;

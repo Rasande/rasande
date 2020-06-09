@@ -56,12 +56,7 @@
 		</footer> <!-- end .site-footer -->
 		
 		<?php wp_footer(); ?>
-		<script>
-			const image = document.getElementsByClassName('test');
-new simpleParallax(image, {
-	scale: 3,
-});
-		</script>
+		
 	</body>
 	
 </html> <!-- end page -->

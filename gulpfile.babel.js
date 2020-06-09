@@ -85,6 +85,12 @@ export const copy = () => {
       .pipe(dest('assets'));
   }
 
+
+export const vendor = () => {
+  return src(['src/js/vendor/**/*'])
+  .pipe(dest('assets/js/vendor'));
+}
+
 // Watch
 export const watcher = () => {
     watch('src/scss/**/*.scss', styles);
@@ -94,6 +100,6 @@ export const watcher = () => {
 }
 
 // Start dev environment
-export const dev = series(clean, parallel(styles, scripts, copy), bs, watcher)
-export const build = series(clean, parallel(styles, scripts, copy))
+export const dev = series(clean, parallel(styles, scripts, copy, vendor), bs, watcher)
+export const build = series(clean, parallel(styles, scripts, copy, vendor))
 export default dev;

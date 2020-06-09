@@ -1,23 +1,72 @@
-import '../vendor/noframework.waypoints.js';
-import anime from '../vendor/anime.js';
+document.addEventListener('DOMContentLoaded', () => {
 
-
-
-
-document.addEventListener('DOMContentLoaded' , () => {
-
-  let waypoint = new waypoint({
-    element: document.querySelector('.site-footer'),
-    handler: function() {
-      anime({
-        targets: '.footer-background',
-        scale: [0, 1],
-        opacity: 1,
-        rotate: [90, 0],
-        duration: 2000,
-        delay: anime.stagger(100)
-    });
+  var waypoint = new Waypoint({
+    element: document.querySelector('.wpcf7-form'),
+    handler: function (direction) {
+      //alert('You have scrolled to a thing');
+      this.destroy()
     },
-    offset: '80%',
-  })
+    offset: '75%',
+  });
+
 })
+
+
+// Rotate on scroll
+
+window.onscroll = function () {
+  scrollRotate();
+};
+
+function scrollRotate() {
+  let image = document.getElementById("rotate--scroll");
+  image.style.transform = "rotate(" + window.pageYOffset/4 + "deg)";
+}
+
+
+
+
+// Animate form labels
+(function($) {
+let formGroup = $('.wpcf7-form p');
+
+$('.wpcf7-form-control').focus(function(){
+  $(this).parents(formGroup).addClass('focused');
+});
+
+$('.wpcf7-form-control').blur(function(){
+  var inputValue = $(this).val();
+  if ( inputValue == "" ) {
+    $(this).removeClass('filled');
+    $(this).parents(formGroup).removeClass('focused');  
+  } else {
+    $(this).addClass('filled');
+  }
+})  
+
+})( jQuery );
+
+// Expand textarea when typing
+var autoExpand = function (field) {
+
+// Reset field height
+field.style.height = 'inherit';
+
+// Get the computed styles for the element
+var computed = window.getComputedStyle(field);
+
+// Calculate the height
+var height = parseInt(computed.getPropertyValue('border-top-width'), 10)
+             + parseInt(computed.getPropertyValue('padding-top'), 10)
+             + field.scrollHeight
+             + parseInt(computed.getPropertyValue('padding-bottom'), 10)
+             + parseInt(computed.getPropertyValue('border-bottom-width'), 10);
+
+field.style.height = height - 14 + 'px';
+
+};
+
+document.addEventListener('input', function (event) {
+if (event.target.tagName.toLowerCase() !== 'textarea') return;
+autoExpand(event.target);
+}, false);
