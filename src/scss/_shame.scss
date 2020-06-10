@@ -1,9 +1,9 @@
 .site-header {
-    animation: .75s ease-out 0s 1 slideInFromTop;
+   // animation: .75s ease-out 0s 1 slideInFromTop;
 }
 
 .site-content {
-    animation: .5s ease-out 0s 1 slideInFromBottom;
+   // animation: .5s ease-out 0s 1 slideInFromBottom;
 
 }
 
@@ -20,4 +20,9 @@
 
 .single-letter {
     display: inline-block;
+}
+
+
+.wp-block-paragraph {
+    opacity: 0;
 }

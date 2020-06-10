@@ -136,12 +136,12 @@
     .nav-item {
       .nav-link {
         color: $nav-link-color;
-        transition: transform .25s ease, color .25s ease;
+        //transition: transform .25s ease, color .25s ease;
 
         @include respond-above($navbar-expand) {
           &:hover {
             color: $nav-link-hover-color;
-            transform: translateY(-2px);
+            //transform: translateY(-2px);
           }
         }
       }
@@ -155,11 +155,11 @@
       .nav-link {
         @include respond-above($navbar-expand) {
           color: $nav-link-color;
-          transition: transform .25s ease, color .25s ease;
+          //transition: transform .25s ease, color .25s ease;
 
           &:hover {
             color: $nav-link-hover-color;
-            transform: translateX(2px);
+            //transform: translateX(2px);
           }
         }
       }

@@ -1,36 +1,87 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // Execute on scroll
-  var selection = document.querySelector('.entry-content p') !== null;
-  if (selection) {
-    var waypoint = new Waypoint({
-      element: document.querySelector('.entry-content p'),
-      handler: function (direction) {
-  
-        this.destroy()
+  var continuousElements = document.getElementsByClassName('wp-block-paragraph')
+  if (continuousElements) {
+  for (var i = 0; i < continuousElements.length; i++) {
+    new Waypoint({
+      element: continuousElements[i],
+      handler: function() {
+        anime({
+          targets: this.element,
+          opacity: [0,1],
+          translateX: [250,0],
+          delay: anime.stagger(100),
+          duration: 2500 
+        });
+        this.destroy();
       },
-      offset: '5%',
-    });
+      offset: '80%'
+    })
   }
+}
 
   // Execute on load
-  anime({
-    targets: '.entry-content p',
-    opacity: [0,1],
-    translateX: [250,0],
-    delay: 300
-  });
+
   anime({
     targets: '.single-letter',
     translateY: [-250,0],
     opacity: [0,1],
     delay: anime.stagger(100) 
   })
+
+  anime({
+    targets: '.site-header',
+    translateY: [-250,0],
+    opacity: [0,1],
+    easing: 'easeOutExpo'
+  })
 })
 
+// Execute on hover
+let navItems = document.querySelectorAll('.nav-item');
+
+navItems.forEach((navItem) => {
+  navItem.addEventListener('mouseenter', (event) => {
+    anime({
+      targets: navItem.querySelector('.nav-link'),
+      translateY: -3,
+      easing: 'easeOutExpo',
+      duration: 300
+    })
+  })
+  navItem.addEventListener('mouseleave', (event) => {
+    anime({
+      targets: navItem.querySelector('.nav-link'),
+      translateY: 0,
+      easing: 'easeOutExpo',
+      duration: 400
+    })
+  })
+});
+
+let ddItems = document.querySelectorAll('.dropdown-item');
+
+ddItems.forEach((ddItem) => {
+  ddItem.addEventListener('mouseenter', (event) => {
+    anime({
+      targets: ddItem.querySelector('.nav-link'),
+      translateX: 3,
+      easing: 'easeOutExpo',
+      duration: 300
+    })
+  })
+  ddItem.addEventListener('mouseleave', (event) => {
+    anime({
+      targets: ddItem.querySelector('.nav-link'),
+      translateX: 0,
+      easing: 'easeOutExpo',
+      duration: 400
+    })
+  })
+});
 
 // Rotate on scroll
-
 window.onscroll = function () {
   scrollRotate();
 };
@@ -39,9 +90,6 @@ function scrollRotate() {
   let image = document.getElementById("rotate--scroll");
   image.style.transform = "rotate(" + window.pageYOffset/4 + "deg)";
 }
-
-
-
 
 // Animate form labels
 (function($) {

@@ -26,5 +26,15 @@
     p {
         margin-bottom: 2em;
         line-height: 2;
+a{
+    background-color: $dark;
+    color: $light;
+    transition: color .25s ease;
+    padding: 0 .2em;
+    &:hover {
+        color: $primary !important;
     }
+}
+    }
+  
 }

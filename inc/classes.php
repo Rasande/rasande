@@ -55,3 +55,12 @@ if ( ! function_exists( 'rasande_svg_attr' ) ) {
 
 // Odd or even
 $odd_or_even = 'odd';
+
+// Add class to paragraph block
+function wph_add_class_for_p_tag($content) {
+    $content = str_replace('<p>', '<p class="wp-block-paragraph">', $content);
+    return $content;
+}
+
+add_filter('the_content', 'wph_add_class_for_p_tag', 9999);
+add_filter('the_excerpt', 'wph_add_class_for_p_tag', 9999);
