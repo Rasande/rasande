@@ -13,7 +13,6 @@ defined( 'ABSPATH' ) || exit;
 if ( ! function_exists( 'rasande_change_logo_class' ) ) {
 	// Replaces logo CSS class.
 	function rasande_change_logo_class( $html ) {
-		$html = str_replace( 'class="custom-logo"', 'class="custom-logo" id="rotate--scroll"', $html );
 		$html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $html );
 		$html = str_replace( 'alt=""', 'title="Home" alt="logo"', $html );
 
@@ -22,7 +21,7 @@ if ( ! function_exists( 'rasande_change_logo_class' ) ) {
     add_filter( 'get_custom_logo', 'rasande_change_logo_class' );
 }
 
-// Set archive post prder
+// Set archive post order
 if ( ! function_exists( 'rasande_archive_order' ) ) {
 
     function rasande_archive_order($query){

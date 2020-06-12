@@ -11,7 +11,7 @@
         width: 100%;
         max-width: $brand-width;
         height: auto;
-        transition: max-width .25s ease;
+        transition: transform 0.25s ease-out, max-width .25s ease;
         z-index: 999;
         @include respond-above(sm) {
                 max-width: $brand-width-small;

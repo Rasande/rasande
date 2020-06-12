@@ -42,8 +42,8 @@ $colors: map-merge(
   $colors
 );
 
-$primary: #00ff80 !default;
-$secondary: $gray-800 !default;
+$primary: #ea907a !default;
+$secondary: #fbc687 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -178,5 +178,3 @@ $grid-gutter-width: 2rem !default;
 $grid-outer-margin: 2rem !default;
 $grid-gutter-compensation: $grid-outer-margin / 2 !default;
 $grid-gutter-halfWidth: $grid-gutter-width / 2 !default;
-
-
