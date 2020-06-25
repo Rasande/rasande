@@ -10,3 +10,39 @@
         }
     }
 }
+
+.portfolio-selected {
+    display: flex;
+    margin: 5rem 0 25rem;
+    .image-content {
+        position: relative;
+        width: 100%;
+        img:nth-of-type(2) {
+            display: none;  
+            width: auto;
+            @include respond-above(sm) {
+                position: absolute;
+                transform: translateY(-60%);
+                display: block;
+               
+            }
+        }
+    }
+    .text-content {
+        width: 100%;
+        align-self: center;
+        text-align: center;
+    }
+    &.odd {
+        img:nth-of-type(2) {
+            right: -8rem;
+        }
+    }
+    &.even {
+        flex-direction: row-reverse;
+        img:nth-of-type(2) {
+            left:-8rem;
+        }
+    }
+
+}

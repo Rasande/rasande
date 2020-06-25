@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Rasande\n"
-"POT-Creation-Date: 2020-05-29 20:00+0200\n"
-"PO-Revision-Date: 2020-05-29 20:00+0200\n"
+"POT-Creation-Date: 2020-06-25 14:07+0200\n"
+"PO-Revision-Date: 2020-06-25 14:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -66,11 +66,11 @@ msgstr "Anpassade Block"
 msgid "Add a menu"
 msgstr "Lägg till meny"
 
-#: inc/setup.php:56
+#: inc/setup.php:58
 msgid "Primary Menu"
 msgstr "Primär meny"
 
-#: inc/setup.php:57
+#: inc/setup.php:59
 msgid "Footer Menu"
 msgstr "Fotmeny"
 
@@ -102,6 +102,10 @@ msgstr "På uppdrag av: "
 msgid "Related projects"
 msgstr "Liknande projekt"
 
+#: template-portfolio.php:50
+msgid "All Projects"
+msgstr "Alla Projekt"
+
 #. Theme Name of the plugin/theme
 msgid "Rasande"
 msgstr ""
@@ -116,6 +120,10 @@ msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "https://rasande.se"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Portfolio"
 msgstr ""
 
 #~ msgid "Show All"

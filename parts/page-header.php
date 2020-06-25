@@ -13,10 +13,6 @@ defined( 'ABSPATH' ) || exit;
         <?php if(is_archive() || is_home()) : ?>
             
             <h1 class="title"><?php the_archive_title();?></h1>
-            
-        <?php elseif(is_404()) : ?>
-            
-            <h1 class="title">404</h1>
         
         <?php else: ?> 
             <?php if (get_field( 'custom_title' )) : ?>

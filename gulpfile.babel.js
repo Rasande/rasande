@@ -18,7 +18,8 @@ const server = browserSync.create();
 export const bs = done => {
     server.init({
       proxy: "http://localhost/",
-      notify: false
+      notify: false,
+      open: false
     });
     done();
   };

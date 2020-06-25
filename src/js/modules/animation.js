@@ -57,6 +57,17 @@ document.addEventListener('DOMContentLoaded', () => {
     easing: 'easeOutExpo'
   })
 
+  // Drop the zero in 404
+  // Execute: on load
+  anime({
+    targets: '.four-zero-four:nth-of-type(2)',
+    rotate: '.1turn',
+    translateY: '25',
+    duration: 2000,
+    easing: 'spring(1, 80, 2, 0)',
+    delay: 1000
+  })
+
   // Block reveal for .page-titel
   // Execute: on load
   let block = document.querySelector('.block-overlay');
@@ -91,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
   }
-  if (titleContainer) {
+  if (block && title && titleContainer) {
     titleReveal(block, title, titleContainer);
   }
 
@@ -130,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
   }
-  if (leadContainer) {
+  if (leadBlock && lead && leadContainer) {
     leadReveal(leadBlock, lead, leadContainer);
   }
   
@@ -180,6 +191,52 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   });
 })
+
+  // Move .social-link up and down
+  // Execute: on hover
+  let socialItems = document.querySelectorAll('.social-item');
+
+  socialItems.forEach((socialItem) => {
+    socialItem.addEventListener('mouseenter', (event) => {
+      anime({
+        targets: socialItem.querySelector('a'),
+        translateY: -3,
+        easing: 'easeOutExpo',
+        duration: 400
+      })
+    })
+    socialItem.addEventListener('mouseleave', (event) => {
+      anime({
+        targets: socialItem.querySelector('a'),
+        translateY: 0,
+        easing: 'easeOutExpo',
+        duration: 500
+      })
+    })
+  });
+
+  // Move .social-link up and down
+  // Execute: on hover
+  let footerItems = document.querySelectorAll('.footer-nav .menu-item');
+
+  footerItems.forEach((footerItem) => {
+    footerItem.addEventListener('mouseenter', (event) => {
+      anime({
+        targets: footerItem.querySelector('a'),
+        translateY: -3,
+        easing: 'easeOutExpo',
+        duration: 400
+      })
+    })
+    footerItem.addEventListener('mouseleave', (event) => {
+      anime({
+        targets: footerItem.querySelector('a'),
+        translateY: 0,
+        easing: 'easeOutExpo',
+        duration: 500
+      })
+    })
+  });
 
 // Rotate .custom-logo
 // Execute: on scroll

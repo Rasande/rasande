@@ -204,11 +204,14 @@
 //
 
 .footer-nav {
-  padding: 0;
+  padding: 1em 0;
   margin: 0;
   list-style: none;
     .menu-item {
       display: inline-block;
       padding: 0 .5rem;
+      a {
+        display: inline-block;
+      }
     }
 }

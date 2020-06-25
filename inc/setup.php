@@ -28,6 +28,8 @@ if ( ! function_exists( 'rasande_theme_support' )) {
         add_image_size( 'gallery-item', 510 ); 
         add_image_size( 'blog-item', 310, 195, array('center','center'));
         add_image_size( 'service-item', 466, 500, array('center', 'center'));
+        add_image_size( 'portfolio-item', 700, 500, array('center', 'center'));
+        add_image_size( 'portfolio-item-small', 280, 380, array('center', 'center'));
         add_image_size( 'page-header', 1075, 600, array('center', 'center'));
 
         // Add support for responsive embedded content

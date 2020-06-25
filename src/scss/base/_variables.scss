@@ -124,7 +124,7 @@ $paragraph-margin-bottom:   1rem !default;
 // Links
 $link-color:                              $primary !default;
 $link-decoration:                         none !default;
-$link-hover-color:                        darken($link-color, 15%) !default;
+$link-hover-color:                        $secondary !default;
 $link-hover-decoration:                   none !default;
 
 // Tables
@@ -142,7 +142,7 @@ $navbar-font-family: $headings-font-family;
 $navbar-font-size: 1.4rem !default;
 
 $navbar-padding-y:                  $spacer / 2 !default;
-$navbar-padding-x:                  $spacer !default;
+$navbar-padding-x:                  2rem !default;
 
 $navbar-expand: sm !default;
 
