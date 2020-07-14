@@ -11,28 +11,31 @@
 		<footer class="site-footer">
 			<!-- Footer Call to Action -->
 			<div class="footer-cta">
-
-				<?php
-		
-					if( have_rows('footer_content', 'option') ):
-						while ( have_rows('footer_content', 'option') ) : the_row();
-						
-							$leftCol = get_sub_field('left_col', 'option');
-							$rightCol = get_sub_field('right_col', 'option');
-							
-						endwhile;
-						echo '</ul>';
-					endif;
-				?>
-
 				<div class="container">
 					<div class="row">
 						<div class="footer-cta-left col-xs-12 col-md-6 pt-2">
-							<?php echo $leftCol; ?>
+
+							<?php 	if( have_rows('footer_content', 'option') ):
+								while ( have_rows('footer_content', 'option') ) : the_row();
+						
+									$leftCol = get_sub_field('left_col', 'option');
+									echo $leftCol; 
+							
+								endwhile;
+							endif; ?>
+
 						</div>
 						<div class="footer-cta-right col-xs-12 col-md-6 pt-2">
-							<p class="text-center">placeholder</p>
-							<p class="text-center"><a href="#" class="footer-cta-link">placeholder</a></p>
+							
+							<?php 	if( have_rows('footer_content', 'option') ):
+								while ( have_rows('footer_content', 'option') ) : the_row();
+						
+									$rightCol = get_sub_field('right_col', 'option');
+									echo $rightCol; 
+							
+								endwhile;
+							endif; ?>
+
 						</div>
 					</div>
 				</div>
