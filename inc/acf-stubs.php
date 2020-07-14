@@ -4,6 +4,9 @@
  * https://www.advancedcustomfields.com/
  */
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 class ACF
 {
     /** @var string The plugin version number. */
