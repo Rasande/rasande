@@ -19,6 +19,8 @@ if( class_exists('ACF') ) :
 	// Fields
 
 	$acf_includes = array(
+		'/footer-fields.php',
+		'/page-fields.php',
 		'/social-media-fields.php'
 	);
 
