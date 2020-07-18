@@ -42,8 +42,8 @@ $colors: map-merge(
   $colors
 );
 
-$primary: #ea907a !default;
-$secondary: #fbc687 !default;
+$primary: #eb4646 !default;
+$secondary: #46a5f3 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -147,8 +147,8 @@ $navbar-padding-x:                  2rem !default;
 $navbar-expand: sm !default;
 
 // Brand
-$brand-width: 60px;
-$brand-width-small: 90px;
+$brand-width: 80px;
+$brand-width-small: 130px;
 
 // Navigation
 $nav-item-spacing: $spacer * 1.2;

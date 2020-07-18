@@ -59,8 +59,17 @@
 						<div class="col-xs-12 col-md-6 text-center text-right-md pt-2">
 							<?php get_template_part( 'parts/social', 'media' );?>
 						</div>
+						<!-- Logotype -->
+						<div class="footer-brand pt-3">
+						<?php 
+						    $svgPath = get_template_directory_uri() . '/assets/img/logo-outline.svg';
+
+							echo file_get_contents($svgPath);
+
+						?>
+						</div>
 						<!-- Copyright Information -->
-						<div class="col-xs-12 text-center pt-2 color-gray-500">
+						<div class="col-xs-12 text-center color-gray-500">
 							<?php rasande_copyright(); ?>
 						</div>
 					</div>

@@ -238,16 +238,56 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   });
 
-// Rotate .custom-logo
-// Execute: on scroll
-function rotateLogo() {
-  let image = document.getElementsByClassName('custom-logo')[0];
-  image.style.transform = "rotate(" + window.pageYOffset / 4 + "deg)";
-}
 
-window.onscroll = function () {
-  rotateLogo();
-};
+// Change color on logo
+// Execute: on hover
+
+let svgPaths = document.querySelectorAll('.navbar-brand svg path');
+
+let primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary');
+let secondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary');
+
+let colors = [primaryColor, secondaryColor , primaryColor, secondaryColor , primaryColor, primaryColor, secondaryColor ];
+
+svgPaths.forEach((function (svgPath, i) {
+
+  svgPath.addEventListener('mouseenter', (event) => {
+ anime({
+      targets: svgPath,
+      fill: [
+        { value: colors[i], duration: 800, delay: 0, easing: 'easeOutExpo' },
+        { value: '#212529', duration: 1600, delay: 0, easing: 'easeInOutExpo' }
+      ],
+    })
+  });
+}));
+
+
+// Draw footer logo
+// Execute: on scroll
+let drawsvg = document.getElementsByClassName('footer-brand');
+
+if (drawsvg) {
+  for (var i = 0; i < drawsvg.length; i++) {
+    new Waypoint({
+      element: drawsvg[i],
+      handler: function () {
+        anime({
+          targets: '.footer-brand svg path',
+          keyframes: [
+            { strokeDashoffset: [anime.setDashoffset, 0], duration: 1000, easing: 'linear', delay: anime.stagger(400)},
+            { fill: '#fff', duration: 3000, easing: 'easeOutExpo'}
+          ],
+     
+          direction: 'normal',
+          opacity: 1,
+        });
+        this.destroy();
+      },
+      offset: 'bottom-in-view'
+    })
+  }
+}
 
 // Expand textarea when typing
 // Execurte: on linebreak

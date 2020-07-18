@@ -1,20 +1,18 @@
 .navbar-brand {
-    display: inline-block;
-    padding-top: .25625rem;
-    padding-bottom: .25625rem;
-    margin-right: 1rem;
-    color: $dark;
+    width: auto;
+    max-width: $brand-width;
+    display: block;
+    padding: .5em 0;
     line-height: inherit;
-    white-space: nowrap;    
-    img {
+    white-space: nowrap;
+    @include respond-above(sm) {
+        max-width: $brand-width-small;
+        padding: 1em 0;
+    }
+    svg {
         position: relative;
-        width: 100%;
-        max-width: $brand-width;
-        height: auto;
-        transition: transform 0.25s ease-out, max-width .25s ease;
-        z-index: 999;
-        @include respond-above(sm) {
-                max-width: $brand-width-small;
-        }
+    fill: $dark;
+    width: 100%;
+    z-index: 999;
     }
 }

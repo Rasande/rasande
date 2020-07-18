@@ -29,4 +29,22 @@
     .copyright {
         padding: 1em 0 2em;
     }
+    .footer-brand {
+        width: auto;
+        margin: 0 auto;
+        max-width: 100px;
+        display: block;
+        line-height: inherit;
+        white-space: nowrap;
+ 
+        svg {
+        position: relative;
+        fill: $dark;
+        width: 100%;
+        z-index: 999;
+        path {
+            opacity: 0;
+        }
+        }
+    }
 }

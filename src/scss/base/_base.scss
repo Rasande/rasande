@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary: #{$primary};
+    --secondary: #{$secondary};
+  }
+
 html {
     font-size: 10px;
     font-family: sans-serif;

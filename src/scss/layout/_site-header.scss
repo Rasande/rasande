@@ -4,10 +4,11 @@
     width: 100%;
     transform: translateZ(40px);
     z-index: 200;
+    transition: background-color .5s ease, height .3s ease;
     // Make header click-through
     pointer-events: none;
     background-color: transparent;
-    transition: background-color .5s ease, height .3s ease;
+
     a, li, button {
         pointer-events: all;
     }
