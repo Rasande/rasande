@@ -13,9 +13,9 @@
 			<div class="footer-cta">
 				<div class="container">
 					<div class="row">
-						<div class="footer-cta-left col-xs-12 col-md-6 pt-2">
+						<div class="footer-cta-left slide-in-ttb col-xs-12 col-md-6 pt-2">
 
-							<?php 	if( have_rows('footer_content', 'option') ):
+							<?php if( have_rows('footer_content', 'option') ):
 								while ( have_rows('footer_content', 'option') ) : the_row();
 						
 									$leftCol = get_sub_field('left_col', 'option');
@@ -25,9 +25,9 @@
 							endif; ?>
 
 						</div>
-						<div class="footer-cta-right col-xs-12 col-md-6 pt-2">
+						<div class="footer-cta-right slide-in-ttb col-xs-12 col-md-6 pt-2">
 							
-							<?php 	if( have_rows('footer_content', 'option') ):
+							<?php if( have_rows('footer_content', 'option') ):
 								while ( have_rows('footer_content', 'option') ) : the_row();
 						
 									$rightCol = get_sub_field('right_col', 'option');

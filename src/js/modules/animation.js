@@ -1,5 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Slide in content bottom to top
+  // Execute: on scroll
+  let slideInTop = document.getElementsByClassName('slide-in-btt');
+
+  if (slideInTop) {
+    for (var i = 0; i < slideInTop.length; i++) {
+      new Waypoint({
+        element: slideInTop[i],
+        handler: function () {
+          anime({
+            targets: this.element,
+            opacity: [0, 1],
+            translateY: [200, 0],
+            delay: anime.stagger(100),
+            duration: 2000,
+            easing: 'easeOutExpo'
+          });
+          this.destroy();
+        },
+        offset: '80%'
+      })
+    }
+  }
+
+  // Slide in content top to bottom
+  // Execute: on scroll
+  let slideInBottom = document.getElementsByClassName('slide-in-ttb');
+
+  if (slideInBottom) {
+    for (var i = 0; i < slideInBottom.length; i++) {
+      new Waypoint({
+        element: slideInBottom[i],
+        handler: function () {
+          anime({
+            targets: this.element,
+            opacity: [0, 1],
+            translateY: [-200, 0],
+            delay: anime.stagger(100),
+            duration: 2000,
+            easing: 'easeOutExpo'
+          });
+          this.destroy();
+        },
+        offset: '80%'
+      })
+    }
+  }
+
   // Slide in content left to right
   // Execute: on scroll
   let slideInRight = document.getElementsByClassName('slide-in-ltr');
@@ -12,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
           anime({
             targets: this.element,
             opacity: [0, 1],
-            translateX: [-250, 0],
+            translateX: [-200, 0],
             delay: anime.stagger(100),
             duration: 2000,
             easing: 'easeOutExpo'
@@ -36,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
           anime({
             targets: this.element,
             opacity: [0, 1],
-            translateX: [250, 0],
+            translateX: [200, 0],
             delay: anime.stagger(100),
             duration: 2000,
             easing: 'easeOutExpo'
@@ -52,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Execute: on load
   anime({
     targets: '.site-header',
-    translateY: [-250, 0],
+    translateY: [-200, 0],
     opacity: [0, 1],
     easing: 'easeOutExpo'
   })
@@ -275,7 +323,7 @@ if (drawsvg) {
         anime({
           targets: '.footer-brand svg path',
           keyframes: [
-            { strokeDashoffset: [anime.setDashoffset, 0], duration: 1000, easing: 'linear', delay: anime.stagger(400)},
+            { strokeDashoffset: [anime.setDashoffset, 0], duration: 1000, easing: 'linear', delay: anime.stagger(400, {from: 'center'})},
             { fill: '#fff', duration: 3000, easing: 'easeOutExpo'}
           ],
      
