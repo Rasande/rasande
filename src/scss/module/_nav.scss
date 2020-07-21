@@ -58,6 +58,15 @@
       &.dropdown {
         position: relative;
 
+          @include respond-above($navbar-expand) {
+            & > .nav-link {
+              &::after {
+                padding-left: .5em;
+                content: "+"
+              }
+          }
+        }
+
         .dropdown-menu {
           position: static;
           display: none;

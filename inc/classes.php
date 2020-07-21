@@ -55,6 +55,8 @@ if ( ! function_exists( 'rasande_svg_attr' ) ) {
 // Odd or even
 $odd_or_even = 'odd';
 
+$left_or_right = 'slide-in-rtl';
+
 // Add class to paragraph block
 function wph_add_class_for_p_tag($content) {
     $content = str_replace('<p>', '<p class="wp-block-paragraph">', $content);
