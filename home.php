@@ -31,32 +31,9 @@ get_header();
                                         );
                                         query_posts( $args );
                                          while (have_posts()) : the_post(); ?>
-                                          <?php if (is_sticky()) :?>
-                                            <div class="col-xs-12">
-                                                <div class="blog-item" data-tilt data-tilt-max="5" data-tilt-scale="1.02">
-                                                <a class="blog-item-link" href="<?php the_permalink(); ?>">
-                                                <?php if ( has_post_thumbnail() ) {
-                                                        the_post_thumbnail('blog-sticky');
-                                                        } else { ?>
-                                                        <img class="blog-item-thumbnail" src="<?php bloginfo('template_directory'); ?>/assets/img/default-blog-sticky.jpg" alt="<?php the_title(); ?>" />
-                                                    <?php } ?>
-                                                    <div class="blog-item-info">
-                                                        <h2 class="font-weight-bold"><?php the_title(); ?></h2>
-                                                        <span><?php echo get_the_date('d/m Y') ?></span>
-                                                        <span>
-                                                            <?php foreach((get_the_category()) as $category){
-                                                                echo $category->name."<br>";
-                                                                echo category_description($category);
-                                                            } ?>
-                                                        </span>
-                                                        <?php the_excerpt(); ?>
-                                                    </div>
-                                                </a>
-                                                </div>
-                                            </div>
-                                          <?php else: ?>
-                                            <div class="col-xs-12 col-sm-6 col-md-4">
-                                                <div class="blog-item" data-tilt data-tilt-max="5" data-tilt-scale="1.02"> 
+                                          
+                                            <div class="col-xs-12 col-sm-6 col-md-4 slide-in-btt">
+                                                <article class="blog-item"> 
                                                 <a class="blog-item-link" href="<?php the_permalink(); ?>">
                                                 <?php if ( has_post_thumbnail() ) {
                                                         the_post_thumbnail('blog-item');
@@ -64,13 +41,12 @@ get_header();
                                                         <img class="blog-item-thumbnail" src="<?php bloginfo('template_directory'); ?>/assets/img/default-blog.jpg" alt="<?php the_title(); ?>" />
                                                     <?php } ?>
                                                     <div class="blog-item-info">
-                                                        <h2 class="font-weight-bold"><?php the_title(); ?></h2>
+                                                        <h2 class="bold"><?php the_title(); ?></h2>
                                                         <span class="blog-date"><?php echo get_the_date('d/m Y') ?></span>
                                                     </div>
                                                 </a>
-                                                </div>
+                                                </article>
                                             </div>
-                                            <?php endif; ?>
                                         <?php endwhile; ?>
                                     <?php else : ?>
                                         <div class="col-xs-12">

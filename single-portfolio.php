@@ -20,7 +20,7 @@ get_header(); ?>
 
                     while (have_posts()) : the_post(); ?>
 
-                        <?php get_template_part( 'parts/portfolio', 'header' ); ?>
+                        <?php get_template_part( 'parts/page', 'header' ); ?>
 
                         <div class="entry-content">
                             <?php the_content(); ?>
@@ -48,13 +48,15 @@ get_header(); ?>
                     'tag__in' => $tagIDs,
                     'post__not_in' => array($post->ID),
                     'posts_per_page' => 3,
+                    'orderby'       => 'rand',
+                    'order' => 'ASC',
                     'ignore_sticky_posts' => 1
                 );
                 $query = new wp_query( $args );
 
                 if ( $query->have_posts() ) :
                     echo '<div class="related-posts"><div class="container">';
-                    echo '<h3>' . __('Related projects', 'rasande') .'</h3>';
+                    echo '<h3 class="bold">' . __('Related projects', 'rasande') .'</h3>';
                     echo '<div class="row">';
 
                     while ($query->have_posts()) :
@@ -62,7 +64,7 @@ get_header(); ?>
 
                         <div class="col-xs-12 col-sm-4">
                             <a href="<?php the_permalink(); ?>">
-                                <div class="related-posts-item" data-tilt data-tilt-max="5" data-tilt-scale="1.02">
+                                <div class="related-posts-item">
                                 <div class="related-posts-item-content">
                                         <h2 class="name"><?php the_title();?></h2>
                                             

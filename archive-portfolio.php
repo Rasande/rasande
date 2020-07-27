@@ -14,7 +14,9 @@ get_header(); ?>
 		    <main class="main">
             <div class="container">
             <?php get_template_part( 'parts/page', 'header' ); ?>
-            <div class="gallery-filter">
+        </div>
+                <div class="container-fluid">
+                <div class="gallery-filter fade-in">
                     
                     <?php
 
@@ -39,14 +41,9 @@ get_header(); ?>
                         <?php endif;?>
 
                     </div>
-        </div>
-                <div class="container-wide">
-             
-
-
-
                     <div class="gallery">
                     <div class="gallery-item-gutter"></div>
+                    <div class="gallery-item-sizer"></div>
                     <?php if (have_posts()) : 
 
                         while (have_posts()) : the_post(); ?>
@@ -64,23 +61,21 @@ get_header(); ?>
                             ?>
 
                             <div class="gallery-item <?php  echo trim( $output ); ?>">
-                            <a href="<?php the_permalink(); ?>">
-                                <div class="gallery-item-wrapper">
-                                <div class="gallery-item-inner" data-tilt data-tilt-max="5" data-tilt-scale="1.02">
-                                   
-                                        <div class="gallery-item-content">
-                                        <h2 class="name"><?php the_title();?></h2>
-                                            
-                                        </div>
-                                        <?php if ( has_post_thumbnail() ) {
-                                    the_post_thumbnail('gallery-item');
-                                    } else { ?>
-                                    <img src="<?php bloginfo('template_directory'); ?>/assets/img/default-blog.jpg" alt="<?php the_title(); ?>" />
-                                <?php } ?>
-                                   
+                                <div class="slide-in-btt">
+                                    <div class="gallery-item-inner">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <?php if ( has_post_thumbnail() ) {
+                                                the_post_thumbnail('medium_large');
+                                            } else { ?>
+                                                <img src="<?php bloginfo('template_directory'); ?>/assets/img/default-blog.jpg" alt="<?php the_title(); ?>" />
+                                            <?php } ?>
+                                            <div class="gallery-item-content">
+                                                <h2 class="name bold"><?php the_title();?></h2>
+                                                <span class="blog-date">
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-                                </div>
-                                </a>
                             </div>
                                     
                         <?php endwhile; ?>	

@@ -41,6 +41,7 @@
             width: 100%;
             bottom: 0;
             padding: .5em 1em;
+            color: $gray-600;
             h2 {
                 font-weight: bold;
                 color: $dark;
@@ -48,9 +49,15 @@
             p {
 
             } 
-            a {
-                display: inline-block;
-                margin-top: 3em;
+            a{
+                background-color: $dark;
+                color: $light;
+                transition: color .25s ease;
+                padding: 0 .2em;
+             
+                &:hover {
+                    color: $primary !important;
+                }
             }
         }
     }

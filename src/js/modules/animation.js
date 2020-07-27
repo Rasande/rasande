@@ -1,5 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  let fadeIn = document.getElementsByClassName('fade-in');
+
+  if (fadeIn) {
+    for (var i = 0; i < fadeIn.length; i++) {
+      new Waypoint({
+        element: fadeIn[i],
+        handler: function () {
+          anime({
+            targets: this.element,
+            opacity: [0, 1],
+            delay: anime.stagger(100),
+            duration: 3000,
+            easing: 'easeOutExpo'
+          });
+          this.destroy();
+        },
+        offset: '80%'
+      })
+    }
+  }
+
   // Slide in content bottom to top
   // Execute: on scroll
   let slideInTop = document.getElementsByClassName('slide-in-btt');

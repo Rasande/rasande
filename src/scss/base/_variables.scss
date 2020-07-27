@@ -42,8 +42,8 @@ $colors: map-merge(
   $colors
 );
 
-$primary: #eb4646 !default;
-$secondary: #46a5f3 !default;
+$primary:     #eb4646 !default;
+$secondary:   #46a5f3 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -104,7 +104,7 @@ $line-height-base:            1.5 !default;
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        'Poppins', sans-serif !default;
 $headings-font-weight:        $font-weight-normal !default;
-$headings-line-height:        1.2 !default;
+$headings-line-height:        1 !default;
 $headings-color:              $dark !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
@@ -174,7 +174,7 @@ $container-width: map-get($breakpoints, "lg");
 $container-wide-width: map-get($breakpoints, "xl");
 
 // Grid
-$grid-gutter-width: 2rem !default;
-$grid-outer-margin: 2rem !default;
+$grid-gutter-width: 4rem !default;
+$grid-outer-margin: 4rem !default;
 $grid-gutter-compensation: $grid-outer-margin / 2 !default;
 $grid-gutter-halfWidth: $grid-gutter-width / 2 !default;

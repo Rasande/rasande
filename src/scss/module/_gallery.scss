@@ -2,55 +2,49 @@
 
     &-item {
         box-sizing: border-box;
-        //padding: 1em;
-        margin-bottom: 10%;
+        margin-bottom: 4rem;
         width: 100%;
         z-index: 40;
-        
-        @include respond-above(sm) {
+
+        @include respond-above(md) {
             width: 48%;
-            margin-bottom: 4%;
             &-sizer {
                 width: 48%; 
             }
             &-gutter {
                 width: 4%;
             }
+        @include respond-above(lg) {
+            width: 32%;
+            &-sizer {
+                width: 32%; 
+            }
+            &-gutter {
+                width: 2%;
+            }
         }
-
-
-
-
+    }
+    &-inner {
+        transition: box-shadow .25s ease, transform .25s ease;
+        box-shadow: 0 25px 50px -12px rgba(0,0,0,0);
+        &:hover {
+            box-shadow: 0 25px 50px -12px $boxshadow-color;
+            transform: scale(1.03);
+        }
+    }
         img {
             width: 100%;
             height: auto;
         }
-        &-wrapper {
-            position: relative;
-          
-        }
-        &-inner {
-            transform-style: preserve-3d;
-            transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
-            transition: box-shadow .25s ease;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0);
-            &:hover {
-                box-shadow: 0 25px 50px -12px $boxshadow-color;
-            }
-        }
+
         &-content {
-            background-color: #fff;
-            position: absolute;
-            bottom: 0;
-            padding: .5em 1em;
-            transform: translateZ(40px);
-            box-shadow: 0 25px 50px -12px $boxshadow-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1em .8em;
             h2 {
-                font-size: 2rem;
-                color: $dark;
-                @include respond-above(md) {
-                    font-size: 3rem;
-                }
+                font-size: 1.8rem;
+                text-align: center;
             }
         }
     }

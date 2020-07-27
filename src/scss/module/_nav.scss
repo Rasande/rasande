@@ -61,7 +61,7 @@
           @include respond-above($navbar-expand) {
             & > .nav-link {
               &::after {
-                padding-left: .5em;
+                padding-left: .3em;
                 content: "+"
               }
           }

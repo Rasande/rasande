@@ -25,7 +25,7 @@ if ( ! function_exists( 'rasande_theme_support' )) {
 
         // Add image sizes
         add_image_size( 'icon', 50, 50, true );
-        add_image_size( 'gallery-item', 510 ); 
+        add_image_size( 'gallery-item', 640); 
         add_image_size( 'blog-item', 310, 195, array('center','center'));
         add_image_size( 'service-item', 466, 500, array('center', 'center'));
         add_image_size( 'portfolio-item', 700, 500, array('center', 'center'));
