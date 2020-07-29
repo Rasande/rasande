@@ -42,7 +42,7 @@ $colors: map-merge(
   $colors
 );
 
-$primary:     #eb4646 !default;
+$primary:     #6a46eb !default;
 $secondary:   #46a5f3 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -155,7 +155,7 @@ $nav-item-spacing: $spacer * 1.2;
 
 $nav-link-color: $body-color;
 $nav-link-hover-color: $primary;
-$nav-link-active-color: rgba($nav-link-color, .5);
+$nav-link-active-color: $gray-600;
 $nav-link-padding-y: 1rem !default; 
 $nav-link-padding-x: 2.5rem !default;
 

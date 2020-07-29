@@ -9,7 +9,6 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); 
 
-
 ?>
 			
 	<div class="site-content">

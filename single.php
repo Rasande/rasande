@@ -52,15 +52,15 @@ get_header(); ?>
             <div class="col-xs-12 col-sm-4">
                 <a href="<?php the_permalink(); ?>">
                     <div class="related-posts-item">
-                    <div class="related-posts-item-content">
-                            <h2 class="name"><?php the_title();?></h2>
-                                
-                            </div>
+          
                         <?php if ( has_post_thumbnail() ) {
                             the_post_thumbnail('blog-item');
                         } else { ?>
                         <img class="blog-item-thumbnail" src="<?php bloginfo('template_directory'); ?>/assets/img/default-blog.jpg" alt="<?php the_title(); ?>" />
                         <?php } ?>
+                        <div class="related-posts-item-content">
+                            <h4 class="name bold"><?php the_title();?></h4>      
+                        </div>
                     </div>
                 </a>
             </div>

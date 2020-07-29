@@ -46,15 +46,13 @@
                 font-weight: bold;
                 color: $dark;
             }
-            p {
-
-            } 
-            a{
+            a {
+                display: inline-block;
                 background-color: $dark;
                 color: $light;
                 transition: color .25s ease;
                 padding: 0 .2em;
-             
+                margin-top: .5em;
                 &:hover {
                     color: $primary !important;
                 }
