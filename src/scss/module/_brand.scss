@@ -14,5 +14,9 @@
     fill: $dark;
     width: 100%;
     z-index: 999;
+    transition: transform .25s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
     }
 }

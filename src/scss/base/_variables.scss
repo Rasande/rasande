@@ -1,4 +1,14 @@
-// Colors
+// Standard Colors
+$blue:     #007bff !default;
+$indigo:   #6610f2 !default;
+$purple:   #6f42c1 !default;
+$pink:     #e83e8c !default;
+$red:      #dc3545 !default;
+$orange:   #fd7e14 !default;
+$yellow:   #ffc107 !default;
+$green:    #28a745 !default;
+$teal:     #20c997 !default;
+$cyan:     #17a2b8 !default;
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -8,42 +18,41 @@ $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-900: #22262a !default;
 $black:    #000 !default;
-
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
 
 $colors: () !default;
 $colors: map-merge(
   (
-    "blue":       $blue,
-    "indigo":     $indigo,
-    "purple":     $purple,
-    "pink":       $pink,
-    "red":        $red,
-    "orange":     $orange,
-    "yellow":     $yellow,
-    "green":      $green,
-    "teal":       $teal,
-    "cyan":       $cyan,
-    "white":      $white,
-    "gray":       $gray-600,
-    "gray-dark":  $gray-800
+    "blue":     $blue,    
+    "indigo":   $indigo,  
+    "purple":   $purple,  
+    "pink":     $pink,    
+    "red":      $red,     
+    "orange":   $orange, 
+    "yellow":   $yellow,
+    "green":    $green,  
+    "teal":     $teal,    
+    "cyan":     $cyan,    
+    "white":    $white,   
+    "gray-100": $gray-100,
+    "gray-200": $gray-200,
+    "gray-300": $gray-300,
+    "gray-400": $gray-400, 
+    "gray-500": $gray-500,
+    "gray-600": $gray-600,
+    "gray-700": $gray-700, 
+    "gray-800": $gray-800, 
+    "gray-900": $gray-900, 
+    "black":    $black  
   ),
   $colors
 );
 
+// Theme Colors
 $primary:     #6a46eb !default;
 $secondary:   #46a5f3 !default;
+$tertiary:    #ce3ba2 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -56,6 +65,7 @@ $theme-colors: map-merge(
   (
     "primary":    $primary,
     "secondary":  $secondary,
+    "tretiary":   $tertiary,
     "success":    $success,
     "info":       $info,
     "warning":    $warning,
@@ -65,6 +75,16 @@ $theme-colors: map-merge(
   ),
   $theme-colors
 );
+
+// Merge color maps
+$all-colors: map-merge($theme-colors,$colors);
+
+// Add all colors to :root as CSS-variables
+:root {
+    @each $name, $color in $all-colors{
+    --#{$name}: #{$color};
+    }
+}
 
 $body-bg:                   #f5f6f7 !default;
 $body-color:                $dark !default;
@@ -81,7 +101,7 @@ $breakpoints: (
   md: 992px,
   lg: 1480px,
   xl: 1600px
-);
+) !default;
 
 // Fonts
 $font-family-sans-serif: 'Poppins', sans-serif !default;
@@ -101,9 +121,9 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
-$headings-margin-bottom:      $spacer / 2 !default;
+$headings-margin-bottom:      $spacer !default;
 $headings-font-family:        'Poppins', sans-serif !default;
-$headings-font-weight:        $font-weight-normal !default;
+$headings-font-weight:        $font-weight-bold !default;
 $headings-line-height:        1 !default;
 $headings-color:              $dark !default;
 
@@ -174,7 +194,7 @@ $container-width: map-get($breakpoints, "lg");
 $container-wide-width: map-get($breakpoints, "xl");
 
 // Grid
-$grid-gutter-width: 4rem !default;
-$grid-outer-margin: 4rem !default;
+$grid-gutter-width: 2rem !default;
+$grid-outer-margin: 2rem !default;
 $grid-gutter-compensation: $grid-outer-margin / 2 !default;
 $grid-gutter-halfWidth: $grid-gutter-width / 2 !default;

@@ -2,10 +2,13 @@
 
     &-item {
         box-sizing: border-box;
-        margin-bottom: 15vh;
+        margin-bottom: 8vh;
         width: 100%;
         z-index: 40;
         transition: box-shadow .15s ease;
+        @include respond-above(sm) {
+            margin-bottom: 15vh; 
+        }
         .odd {
             align-items: center;
             flex-direction: row-reverse;
@@ -40,11 +43,20 @@
             text-align: center;
             width: 100%;
             bottom: 0;
-            padding: .5em 1em;
+            padding: 1em 1em;
             color: $gray-600;
             h2 {
                 font-weight: bold;
                 color: $dark;
+                font-size: 24px;
+                @include respond-above(xs) {
+                    font-size: 32px;
+                }
+                @include respond-above(sm) {
+                    font-size: 44px;
+                  
+                }
+
             }
             a {
                 display: inline-block;

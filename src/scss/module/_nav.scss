@@ -6,6 +6,7 @@
   justify-content: space-between;
   padding: $navbar-padding-y $navbar-padding-x;
   font-weight: 500;
+  background-color: $dropdown-bg;
   &-nav {
     display: flex;
     flex-basis: 100%;

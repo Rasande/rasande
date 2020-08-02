@@ -29,7 +29,6 @@ get_header(); ?>
                     <?php endwhile; ?>	
                     
                 <?php endif; ?>
-                <?php get_template_part( 'parts/portfolio', 'meta' ) ?>
                 </div>
             </main> 
             

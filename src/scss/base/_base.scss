@@ -47,6 +47,7 @@ body {
     text-align: left;
     background-color: $body-bg;
     overflow-x: hidden;
+
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -106,7 +107,6 @@ h5,
 h6,
 .h6 {
     font-size: $h6-font-size;
-    ;
 }
 
 p {

@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     }
   }
-
+ 
   // Slide down site header
   // Execute: on load
   anime({
@@ -306,31 +306,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     })
   });
-
-
-// Change color on logo
-// Execute: on hover
-
-let svgPaths = document.querySelectorAll('.navbar-brand svg path');
-
-let primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary');
-let secondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary');
-
-let colors = [primaryColor, secondaryColor , primaryColor, secondaryColor , primaryColor, primaryColor, secondaryColor ];
-
-svgPaths.forEach((function (svgPath, i) {
-
-  svgPath.addEventListener('mouseenter', (event) => {
- anime({
-      targets: svgPath,
-      fill: [
-        { value: colors[i], duration: 800, delay: 0, easing: 'easeOutExpo' },
-        { value: '#212529', duration: 1600, delay: 0, easing: 'easeInOutExpo' }
-      ],
-    })
-  });
-}));
-
 
 // Draw footer logo
 // Execute: on scroll

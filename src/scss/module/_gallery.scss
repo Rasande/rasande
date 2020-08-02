@@ -56,10 +56,12 @@
     padding: 0 0 2em ;
     font-size: $navbar-font-size;
     font-family: $navbar-font-family;
+  
     button {
         transition: transform .25s ease;
         color: $dark;
         transition: color .25s ease, transform .25s ease;
+        font-weight: 500;
         
         &:hover {
             color: $primary;
@@ -76,6 +78,6 @@
 .btn-filter-group {
     flex-wrap: wrap;
     button {
-        margin: .2em 1em;
+        margin: .2em .5em;
     }
 }

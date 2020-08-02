@@ -4,3 +4,36 @@
 .text-biggest {
     font-size: 18vw;
 }
+
+h2, .h2 {
+    font-size:28px;
+    @include respond-above(sm) {
+        font-size: 44px;
+    }
+
+}
+
+h3, .h3 {
+    font-size:26px;
+    @include respond-above(sm) {
+        font-size: 38px;
+    }
+}
+
+h4, .h4 {
+    font-size: 24px;
+    @include respond-above(sm) {
+        font-size: 33px;
+    }
+}
+
+h5, .h5 {
+    font-size: 22px;
+    @include respond-above(sm) {
+        font-size: 25px;
+    }
+}
+
+h6, .h6 {
+    font-size: 22px;
+}
