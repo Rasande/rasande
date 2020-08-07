@@ -8,15 +8,17 @@
     @include respond-above(sm) {
         max-width: $brand-width-small;
         padding: 1em 0;
+        transition: transform .25s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     svg {
         position: relative;
     fill: $dark;
     width: 100%;
     z-index: 999;
-    transition: transform .25s ease;
-    &:hover {
-        transform: scale(1.1);
-    }
+   
+
     }
 }
