@@ -30,13 +30,13 @@ form.wpcf7-form {
         }
     }
     input {
-        height: 45px;
-        padding: 5px 10px;
+        height: 60px;
+        padding: 10px 10px 5px;
         border-radius: 0;
     }
     textarea {
-        min-height: 65px;
-        padding: 9px 10px 5px;
+        min-height: 60px;
+        padding: 10px 10px 5px;
         border-radius: 0;
         resize: none;
     }
@@ -65,10 +65,13 @@ span .wpcf7-not-valid {
     border-bottom: 1px solid $danger !important;
     &-tip {
         color: $danger;
+        font-size: $navbar-font-size;
+
     }
 }
 div.wpcf7-response-output {
     margin: 2em 0 1em;
+    font-size: $navbar-font-size;
 }
 div.wpcf7-validation-errors {
     background-color: rgba($danger, 0.25);
