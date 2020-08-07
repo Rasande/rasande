@@ -30,7 +30,7 @@ a{
     background-color: $dark;
     color: $light;
     transition: color .25s ease;
-    padding: 0 .2em;
+    padding: 0 .4em;
     &:hover {
         color: $primary !important;
     }

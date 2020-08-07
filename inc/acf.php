@@ -25,7 +25,7 @@ if( class_exists('ACF') ) :
 	);
 
 	foreach ( $acf_includes as $file ) {
-		$filepath = locate_template( 'fields' . $file );
+		$filepath = locate_template( 'inc/fields' . $file );
 
 		if ( ! $filepath ) {
 			trigger_error( sprintf( 'Error locating /fields%s for inclusion', $file ), E_USER_ERROR );

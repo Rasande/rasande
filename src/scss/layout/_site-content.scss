@@ -2,4 +2,7 @@
        // Push down the footer
     min-height: 100vh;
     padding-top: 5rem;
+    @include respond-above(md) {
+        padding-top: 10rem;
+    }
 }

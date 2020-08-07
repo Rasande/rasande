@@ -51,7 +51,7 @@ $colors: map-merge(
 
 // Theme Colors
 $primary:     #785afc !default;
-$secondary:   #46a5f3 !default;
+$secondary:   #f86d55 !default;
 $tertiary:    #ce3ba2 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -100,7 +100,7 @@ $breakpoints: (
   sm: 814px,
   md: 992px,
   lg: 1480px,
-  xl: 1800px
+  xl: 1600px
 ) !default;
 
 // Fonts
@@ -175,7 +175,7 @@ $nav-item-spacing: $spacer * 1.2;
 
 $nav-link-color: $body-color;
 $nav-link-hover-color: $primary;
-$nav-link-active-color: $gray-600;
+$nav-link-active-color: $gray-500;
 $nav-link-padding-y: 1rem !default; 
 $nav-link-padding-x: 2.5rem !default;
 
@@ -192,6 +192,7 @@ $hamburger-layer-color: #212529;
 // Containers
 $container-width: map-get($breakpoints, "lg");
 $container-wide-width: map-get($breakpoints, "xl");
+$container-narrow-width: map-get($breakpoints, "md");
 
 // Grid
 $grid-gutter-width: 2rem !default;

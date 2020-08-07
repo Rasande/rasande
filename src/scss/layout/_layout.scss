@@ -1,5 +1,5 @@
 
-.container-fluid, .container, .container-wide {
+.container-fluid, .container, .container-wide, .container-narrow {
     margin-right: auto;
     margin-left: auto;
   }
@@ -22,6 +22,12 @@
     padding-left: $grid-outer-margin;
 }
 
+  .container-narrow {
+    width: 100%;
+    max-width: $container-narrow-width;
+    padding-right: $grid-outer-margin;
+    padding-left: $grid-outer-margin;
+  }
   .row {
     box-sizing: border-box;
     display: flex;

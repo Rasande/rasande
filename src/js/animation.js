@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+
+
   let fadeIn = document.getElementsByClassName('fade-in');
 
   if (fadeIn) {
@@ -123,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     targets: '.site-header',
     translateY: [-200, 0],
     opacity: [0, 1],
-    easing: 'easeOutExpo'
+    easing: 'easeOutExpo',
   })
 
   // Drop the zero in 404

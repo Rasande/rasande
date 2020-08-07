@@ -8,22 +8,12 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
+<!-- Hero section -->
 <div class="hero">
- <div class="hero-content">
-    <div class="row align-center">
-
-        <div class="col-xs-12 col-md-8">
-            <h1 class="page-title"><span class="primary-color">Andreas Jansson</span> utvecklare & designer</h1>
-            <div class="lead">
-                <p>Andreas Jansson, frilansande utvecklare och designer i Uppsala.</p>
+    <div class="hero-inner">
+        <div class="hero-content slide-in-btt">
+            <h1 class="hero-title ">Andreas Jansson<span class="hero-title-2nd-row" style = "display: block;">Digital design och webbutveckling</span></h1>
+     
             </div>
         </div>
-
-        <div class="col-xs-12 col-md-4 text-right">
-            <img class="hero-img" src="http://localhost/rasandese/wp-content/uploads/2020/04/ommiginspopic-500x466.jpg" alt="">
-        </div>
-
     </div>
-</div>
-<div class="hero-bg"></div>
-</div>

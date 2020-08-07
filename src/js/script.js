@@ -1,3 +1,3 @@
-import './modules/navigation'
-import './modules/isotope'
-import './modules/animation'
+import './navigation'
+import './isotope'
+import './animation'

@@ -31,7 +31,7 @@ export const reload = done => {
 };
 
 // Clean the assets folder
-export const clean = () => del(['assets']);
+export const clean = () => del(['assets/js', 'assets/css']);
 
 // Run gulp styles to compile sass files
 // Run gulp styles --prod to also minify 

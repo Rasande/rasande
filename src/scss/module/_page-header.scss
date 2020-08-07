@@ -34,21 +34,11 @@
     }
 
     // Lead
-    .lead {
-        opacity: 0;
-        height: auto;
-        width: 100%;
-        p, h2 {
-            font-size: 22px;
-            color: $gray-600;
-            @include respond-above(xs) {
-                font-size: 24px;
-            }
-            @include respond-above(md) {
-                font-size: 30px;
-            }
-        }
-    }
+.lead {
+    opacity: 0;
+    height: auto;
+    width: 100%;
+}
 
     .post-meta, .post-meta a {
         font-size: $navbar-font-size;
@@ -67,6 +57,21 @@
         background-color: $dark;
     }
     .lead-block-overlay {
-        background-color: $gray-500;
+        background-color: $secondary;
+    }
+}
+
+.lead {
+    
+   
+    p, h2 {
+        font-size: 22px;
+        color: $gray-600;
+        @include respond-above(xs) {
+            font-size: 24px;
+        }
+        @include respond-above(md) {
+            font-size: 30px;
+        }
     }
 }

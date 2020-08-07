@@ -16,7 +16,7 @@ get_header(); ?>
             <?php get_template_part( 'parts/page', 'header' ); ?>
         </div>
                 <div class="container-fluid">
-                <div class="gallery-filter fade-in">
+                <div class="gallery-filter">
                     
                     <?php
 
@@ -33,7 +33,9 @@ get_header(); ?>
 
                                     <?php 
                                     $filterData = '.';
-                                    $filterData .= $term->name; ?>
+                                    $filterData .= str_replace(' ', '-',$term->name) ;
+                                    ?>
+                                    
 
                                     <button type="button" class="btn btn-link btn-filter" data-filter="<?php echo strtolower($filterData); ?>"><?php echo $term->name; ?></button>
                                 <?php } ?>
@@ -41,7 +43,7 @@ get_header(); ?>
                         <?php endif;?>
 
                     </div>
-                    <div class="gallery">
+                    <div class="gallery slide-in-btt">
                     <div class="gallery-item-gutter"></div>
                     <div class="gallery-item-sizer"></div>
                     <?php if (have_posts()) : 
@@ -54,15 +56,15 @@ get_header(); ?>
                             $output = '';
                             if ( ! empty( $categories ) ) {
                                 foreach( $categories as $category ) {
-                                    $output .= strtolower( $category->name );
+                                    $output .= strtolower( str_replace(' ', '-',$category->name) );
                                     $output .= ' ';
                                 }
                             }
                             ?>
 
                             <div class="gallery-item <?php  echo trim( $output ); ?>">
-                                <div class="slide-in-btt">
-                                    <div class="gallery-item-inner">
+                                <div class="">
+                                    <div class="gallery-item-inner slide-in-btt">
                                         <a href="<?php the_permalink(); ?>">
                                             <?php if ( has_post_thumbnail() ) {
                                                 the_post_thumbnail('medium_large');

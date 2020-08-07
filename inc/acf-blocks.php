@@ -15,7 +15,7 @@ function register_acf_block_types() {
     'name'              => 'social_icons',
     'title'             => __('Social Icons'),
     'description'       => __('Display social media icons.'),
-    'render_template'   => '/blocks/social-media-block.php', // Ändra till blocks mappen
+    'render_template'   => '/inc/blocks/social-media-block.php', // Ändra till blocks mappen
     'category'          => 'customblocks',
     'icon'              => 'admin-comments',
     'keywords'          => array( 'ingress', 'start' ),
