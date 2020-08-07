@@ -6,7 +6,6 @@ jQuery(document).ready(function ($) {
       masonry : {
         gutter: '.gallery-item-gutter',
       },
-      stagger: 30,
     });
 
     // bind filter button click
@@ -24,5 +23,3 @@ jQuery(document).ready(function ($) {
       });
     });
 });
-
-

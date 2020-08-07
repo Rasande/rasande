@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-
-
   let fadeIn = document.getElementsByClassName('fade-in');
 
   if (fadeIn) {
@@ -218,93 +216,23 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Move .nav-item up and down
   // Execute: on hover
-  let navItems = document.querySelectorAll('.nav-item');
+  let navItems = document.querySelectorAll('.nav-link, .btn-filter, .site-footer a ');
 
   navItems.forEach((navItem) => {
     navItem.addEventListener('mouseenter', (event) => {
       anime({
-        targets: navItem.querySelector('.nav-link'),
-        translateY: -3,
+        targets: navItem,
+        scale: 1.1,
         easing: 'easeOutExpo',
-        duration: 400
+        duration: 600
       })
     })
     navItem.addEventListener('mouseleave', (event) => {
       anime({
-        targets: navItem.querySelector('.nav-link'),
-        translateY: 0,
+        targets: navItem,
+        scale: 1,
         easing: 'easeOutExpo',
-        duration: 500
-      })
-    })
-  });
-
-  // Move .dropdown-item right and left
-  // Execute: on hover
-  let ddItems = document.querySelectorAll('.dropdown-item');
-
-  ddItems.forEach((ddItem) => {
-    ddItem.addEventListener('mouseenter', (event) => {
-      anime({
-        targets: ddItem.querySelector('.nav-link'),
-        translateX: 3,
-        easing: 'easeOutExpo',
-        duration: 400
-      })
-    })
-    ddItem.addEventListener('mouseleave', (event) => {
-      anime({
-        targets: ddItem.querySelector('.nav-link'),
-        translateX: 0,
-        easing: 'easeOutExpo',
-        duration: 500
-      })
-    })
-  });
-})
-
-  // Move .social-link up and down
-  // Execute: on hover
-  let socialItems = document.querySelectorAll('.social-item');
-
-  socialItems.forEach((socialItem) => {
-    socialItem.addEventListener('mouseenter', (event) => {
-      anime({
-        targets: socialItem.querySelector('a'),
-        translateY: -3,
-        easing: 'easeOutExpo',
-        duration: 400
-      })
-    })
-    socialItem.addEventListener('mouseleave', (event) => {
-      anime({
-        targets: socialItem.querySelector('a'),
-        translateY: 0,
-        easing: 'easeOutExpo',
-        duration: 500
-      })
-    })
-  });
-
-  // Move .social-link up and down
-  // Execute: on hover
-  let footerItems = document.querySelectorAll('.footer-nav .menu-item');
-
-  footerItems.forEach((footerItem) => {
-    footerItem.addEventListener('mouseenter', (event) => {
-      anime({
-        targets: footerItem.querySelector('a'),
-        translateY: -3,
-        easing: 'easeOutExpo',
-        duration: 400
-      })
-    })
-    footerItem.addEventListener('mouseleave', (event) => {
-      anime({
-        targets: footerItem.querySelector('a'),
-        translateY: 0,
-        easing: 'easeOutExpo',
-        duration: 500
+        duration: 800
       })
     })
   });
@@ -382,3 +310,5 @@ document.addEventListener('input', function (event) {
   })
 
 })(jQuery);
+
+})

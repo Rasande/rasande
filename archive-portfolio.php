@@ -61,25 +61,21 @@ get_header(); ?>
                                 }
                             }
                             ?>
-
+                            <?php if ( has_post_thumbnail() ) : ?>
                             <div class="gallery-item <?php  echo trim( $output ); ?>">
-                                <div class="">
-                                    <div class="gallery-item-inner slide-in-btt">
+                                    <div class="gallery-item-inner">
+                                        
                                         <a href="<?php the_permalink(); ?>">
-                                            <?php if ( has_post_thumbnail() ) {
-                                                the_post_thumbnail('medium_large');
-                                            } else { ?>
-                                                <img src="<?php bloginfo('template_directory'); ?>/assets/img/default-blog.jpg" alt="<?php the_title(); ?>" />
-                                            <?php } ?>
+                                               <?php the_post_thumbnail('medium_large'); ?>
                                             <div class="gallery-item-content">
                                                 <h2 class="name bold"><?php the_title();?></h2>
                                                 <span class="blog-date">
                                             </div>
                                         </a>
-                                    </div>
+                               
                                 </div>
                             </div>
-                                    
+                            <?php endif; ?>
                         <?php endwhile; ?>	
                     <?php else : ?>
 

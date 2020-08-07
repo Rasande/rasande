@@ -2,7 +2,7 @@
 
     &-item {
         box-sizing: border-box;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
         width: 100%;
         z-index: 40;
 
@@ -60,12 +60,10 @@
     button {
         transition: transform .25s ease;
         color: $dark;
-        transition: color .25s ease, transform .25s ease;
+        transition: color .25s ease;
         font-weight: 500;
-        
         &:hover {
             color: $primary;
-            transform: translateY(-2px);
             text-decoration: none;
         }
         &.selected {
@@ -78,6 +76,6 @@
 .btn-filter-group {
     flex-wrap: wrap;
     button {
-        margin: .2em .5em;
+        padding: .2em .5em;
     }
 }
