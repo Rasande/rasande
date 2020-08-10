@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navItem.addEventListener('mouseenter', (event) => {
       anime({
         targets: navItem,
-        scale: 1.1,
+        scale: 1.2,
         easing: 'easeOutExpo',
         duration: 600
       })
