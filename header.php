@@ -11,8 +11,8 @@
 	<html <?php language_attributes(); ?>>
 		<head>
 			<meta charset="<?php bloginfo( 'charset' ); ?>">
-			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-			<meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 			<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 			<link rel="profile" href="http://gmpg.org/xfn/11">
 			<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
