@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Rasande\n"
-"POT-Creation-Date: 2020-06-25 14:07+0200\n"
-"PO-Revision-Date: 2020-06-25 14:07+0200\n"
+"POT-Creation-Date: 2020-08-10 14:55+0200\n"
+"PO-Revision-Date: 2020-08-10 14:55+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -22,27 +22,31 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 
-#: archive-portfolio.php:26
+#: 404.php:24
+msgid "The page you are looking for does not exist. "
+msgstr "Något gick snett, sidan du söker verkar inte finnas."
+
+#: archive-portfolio.php:34
 msgid "Filter cases"
 msgstr "Filtrera projekt"
 
-#: archive-portfolio.php:27
+#: archive-portfolio.php:36
 msgid "All"
 msgstr "Alla"
 
-#: archive-portfolio.php:89
+#: archive-portfolio.php:92
 msgid "Here it was empty, new projects coming soon!"
 msgstr "Här var det tomt, nya projekt kommer snart!"
 
-#: archive-tjanster.php:57
+#: archive-tjanster.php:48
 msgid "Read More"
 msgstr "Läs Mer"
 
-#: archive-tjanster.php:70
+#: archive-tjanster.php:58
 msgid "Here it was empty, new services coming soon!"
 msgstr "Här var det tomt, nya tjänster kommer snart!"
 
-#: home.php:77
+#: home.php:61
 msgid "Here it was empty, new posts coming soon!"
 msgstr "Här var det tomt, nya inlägg kommer snart!"
 
@@ -54,11 +58,11 @@ msgstr "Sociala Ikoner"
 msgid "Display social media icons."
 msgstr "Visa social media ikoner."
 
-#: inc/acf.php:6 inc/acf.php:7
+#: inc/acf.php:11 inc/acf.php:12
 msgid "Theme settings"
 msgstr "Tema inställningar"
 
-#: inc/editor.php:10
+#: inc/editor.php:13
 msgid "Custom Blocks"
 msgstr "Anpassade Block"
 
@@ -86,25 +90,13 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr "Öppna navigation"
 
-#: parts/portfolio-meta.php:23
-msgid "Customer: "
-msgstr "Kund: "
-
-#: parts/portfolio-meta.php:26
-msgid "In association with: "
-msgstr "I samarbete med: "
-
-#: parts/portfolio-meta.php:29
-msgid "On behalf of: "
-msgstr "På uppdrag av: "
-
-#: single-portfolio.php:57
+#: single-portfolio.php:68
 msgid "Related projects"
 msgstr "Liknande projekt"
 
-#: template-portfolio.php:50
-msgid "All Projects"
-msgstr "Alla Projekt"
+#: single.php:56
+msgid "Similar posts"
+msgstr "Liknande artiklar"
 
 #. Theme Name of the plugin/theme
 msgid "Rasande"
@@ -123,8 +115,24 @@ msgid "https://rasande.se"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "Portfolio"
+msgid "Start"
 msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Narrow"
+msgstr ""
+
+#~ msgid "Customer: "
+#~ msgstr "Kund: "
+
+#~ msgid "In association with: "
+#~ msgstr "I samarbete med: "
+
+#~ msgid "On behalf of: "
+#~ msgstr "På uppdrag av: "
+
+#~ msgid "All Projects"
+#~ msgstr "Alla Projekt"
 
 #~ msgid "Show All"
 #~ msgstr "Visa Alla"

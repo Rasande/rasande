@@ -1,14 +1,13 @@
 <?php 
 /**
- * List of social media links
+ * List social media links with svg icons
  * 
- *  ACF depended
+ * ACF dependent
  * 
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-
 
 if( have_rows('social_media', 'option') ):
 	echo '<ul class="social-media ">';

@@ -1,4 +1,4 @@
-.page-header {
+.entry-header {
     display: flex;
     flex-direction: column;
     padding: 4em 0 2em;
@@ -8,7 +8,7 @@
     @include respond-above(md) {
         padding: 4em 0 6em;
     }
-    .page-title, .page-lead {
+    .entry-title, .entry-lead {
         position: relative;
         display: block;
         width:100%;

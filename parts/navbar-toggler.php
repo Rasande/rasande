@@ -1,6 +1,6 @@
 <?php 
 /**
- * Navbar toggle part.
+ * Display hambuyrger menu toggle
  * 
  */
 

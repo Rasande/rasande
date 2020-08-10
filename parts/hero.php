@@ -1,6 +1,9 @@
 <?php 
 /**
- * Custom logo part.
+ * Hero section for frontpage template.
+ * 
+ * TODO:
+ * Add custom fields for the content.
  * 
  */
 
@@ -8,12 +11,10 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<!-- Hero section -->
-<div class="hero">
+<header class="hero">
     <div class="hero-inner">
         <div class="hero-content slide-in-btt">
             <h1 class="hero-title ">Andreas Jansson<span class="hero-title-2nd-row" style = "display: block;">Digital design och webbutveckling</span></h1>
-     
             </div>
         </div>
-    </div>
+</header>

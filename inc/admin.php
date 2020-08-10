@@ -12,7 +12,7 @@ if ( ! function_exists( 'rasande_admin_bar_css' )) {
 
         if ( is_admin_bar_showing() ) { ?>
      
-           <style type="text/css">
+           <style>
                 body.admin-bar {
                 margin-top: -46px;
                 margin-bottom: 46px;

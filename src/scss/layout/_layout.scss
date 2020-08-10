@@ -6,8 +6,8 @@
   
   .container-fluid {
     width: 100%;
-    padding-right: $grid-outer-margin -$grid-gutter-halfWidth;
-    padding-left: $grid-outer-margin -$grid-gutter-halfWidth ;
+    padding-right: $grid-outer-margin;
+    padding-left: $grid-outer-margin;
   }
   .container {
     max-width: $container-width;

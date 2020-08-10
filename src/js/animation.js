@@ -137,11 +137,11 @@ document.addEventListener('DOMContentLoaded', () => {
     delay: 1000
   })
 
-  // Block reveal for .page-titel
+  // Block reveal for .entry-titel
   // Execute: on load
   let block = document.querySelector('.block-overlay');
   let title = document.querySelector('.title');
-  let titleContainer = document.querySelector('.page-title');
+  let titleContainer = document.querySelector('.entry-title');
 
   var titleReveal = function (block, title, titleContainer) {
 
@@ -175,11 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
     titleReveal(block, title, titleContainer);
   }
 
-  // Block reveal for .page-lead
+  // Block reveal for .entry-lead
   // Execute: on load
   let leadBlock = document.querySelector('.lead-block-overlay');
   let lead = document.querySelector('.lead');
-  let leadContainer = document.querySelector('.page-lead');
+  let leadContainer = document.querySelector('.entry-lead');
 
   var leadReveal = function (leadBlock, lead, leadContainer) {
 
