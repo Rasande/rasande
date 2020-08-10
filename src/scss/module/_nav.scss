@@ -223,10 +223,10 @@
       padding: 0 1rem;
       a {
         display: inline-block;
-        color: $primary;
+        color: $secondary;
         transition: color .25s ease;
         &:hover {
-          color: $secondary
+          color: $primary;
         }
       }
     }

@@ -62,10 +62,10 @@
     }
     a {
         display: block;
-        color: $secondary;
+        color: $primary;
         transition: color .25s ease;
         &:hover {
-          color: $primary
+          color: $secondary;
         }
     }
 }
