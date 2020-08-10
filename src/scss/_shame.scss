@@ -42,3 +42,54 @@ h6, .h6 {
 .primary-color {
     color: $primary;
 }
+.right-25 {
+    margin: 0;
+    padding: 0;
+    @include respond-above(md) {
+        margin-left: 75%;
+        padding-left: 1rem;
+    }
+}
+
+.right-50 {
+margin: 0;
+padding: 0;
+@include respond-above(md) {
+    margin-left: 50%;
+    padding-left: 1rem;
+
+    }   
+}
+.right-75 {
+    margin: 0;
+    padding: 0;
+    @include respond-above(md) {
+        margin-left: 25%;
+        padding-left: 1rem;
+    }
+}
+
+.left-25 {
+    margin: 0;
+    padding: 0;
+    @include respond-above(md) {
+        margin-right: 75%;
+        padding-right: 1rem;
+    }
+}
+.left-50 {
+    margin: 0;
+    padding: 0;
+    @include respond-above(md) {
+        margin-right: 50%;
+        padding-right: 1rem;
+    }
+}
+.left-75 {
+    margin: 0;
+    padding: 0;
+    @include respond-above(md) {
+        margin-right: 25%;
+        padding-right: 1rem;
+    }
+}

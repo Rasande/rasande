@@ -11,5 +11,10 @@ ul.social-media {
     }
     a.social-link {
         display: inline-block;
+        color: $primary;
+        transition: color .25s ease;
+        &:hover {
+          color: $secondary
+        }
     }
 }
