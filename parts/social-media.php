@@ -19,7 +19,7 @@ if( have_rows('social_media', 'option') ):
         $socialurl = get_sub_field('social_url', 'option');
         
 		echo '<li class="social-item">';
-        echo '<a class="social-link" rel="nofollow noopener noreferrer" title="' . $socialchannel . '" href="' . $socialurl . '" target="_blank">';  
+        echo '<a class="social-link" rel="noopener noreferrer" title="' . $socialchannel . '" href="' . $socialurl . '" target="_blank">';  
 		echo $socialicon;
         echo '</a></li>';
         
