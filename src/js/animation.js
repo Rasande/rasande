@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     }
   }
- 
+
   // Slide down site header
   // Execute: on load
   anime({
@@ -213,102 +213,123 @@ document.addEventListener('DOMContentLoaded', () => {
   if (leadBlock && lead && leadContainer) {
     leadReveal(leadBlock, lead, leadContainer);
   }
-  
-  // Move .nav-item up and down
-  // Execute: on hover
-  let navItems = document.querySelectorAll('.nav-link, .btn-filter, .site-footer a ');
 
-  navItems.forEach((navItem) => {
-    navItem.addEventListener('mouseenter', (event) => {
-      anime({
-        targets: navItem,
-        scale: 1.2,
-        easing: 'easeOutExpo',
-        duration: 600
+  // Draw footer logo
+  // Execute: on scroll
+  let drawsvg = document.getElementsByClassName('footer-brand');
+
+  if (drawsvg) {
+    for (var i = 0; i < drawsvg.length; i++) {
+      new Waypoint({
+        element: drawsvg[i],
+        handler: function () {
+          anime({
+            targets: '.footer-brand svg path',
+            keyframes: [{
+                strokeDashoffset: [anime.setDashoffset, 0],
+                duration: 1000,
+                easing: 'linear',
+                delay: anime.stagger(400, {
+                  from: 'center'
+                })
+              },
+              {
+                fill: '#fff',
+                duration: 3000,
+                easing: 'easeOutExpo'
+              }
+            ],
+
+            direction: 'normal',
+            opacity: 1,
+          });
+          this.destroy();
+        },
+        offset: 'bottom-in-view'
       })
-    })
-    navItem.addEventListener('mouseleave', (event) => {
-      anime({
-        targets: navItem,
-        scale: 1,
-        easing: 'easeOutExpo',
-        duration: 800
-      })
-    })
-  });
-
-// Draw footer logo
-// Execute: on scroll
-let drawsvg = document.getElementsByClassName('footer-brand');
-
-if (drawsvg) {
-  for (var i = 0; i < drawsvg.length; i++) {
-    new Waypoint({
-      element: drawsvg[i],
-      handler: function () {
-        anime({
-          targets: '.footer-brand svg path',
-          keyframes: [
-            { strokeDashoffset: [anime.setDashoffset, 0], duration: 1000, easing: 'linear', delay: anime.stagger(400, {from: 'center'})},
-            { fill: '#fff', duration: 3000, easing: 'easeOutExpo'}
-          ],
-     
-          direction: 'normal',
-          opacity: 1,
-        });
-        this.destroy();
-      },
-      offset: 'bottom-in-view'
-    })
-  }
-}
-
-// Expand textarea when typing
-// Execurte: on linebreak
-var autoExpand = function (field) {
-
-  field.style.height = 'inherit';
-
-  var computed = window.getComputedStyle(field);
-  var height = parseInt(computed.getPropertyValue('border-top-width'), 10) +
-    parseInt(computed.getPropertyValue('padding-top'), 10) +
-    field.scrollHeight +
-    parseInt(computed.getPropertyValue('padding-bottom'), 10) +
-    parseInt(computed.getPropertyValue('border-bottom-width'), 10);
-
-  field.style.height = height - 14 + 'px';
-
-};
-
-document.addEventListener('input', function (event) {
-  if (event.target.tagName.toLowerCase() !== 'textarea') return;
-  autoExpand(event.target);
-}, false);
-
-//=============================
-//========= JQUERY ============
-//=============================
-
-(function ($) {
-
-  // Animate form labels
-  // Execure on input focus
-  let formGroup = $('.wpcf7-form p');
-
-  $('.wpcf7-form-control').focus(function () {
-    $(this).parents(formGroup).addClass('focused');
-  });
-
-  $('.wpcf7-form-control').blur(function () {
-    var inputValue = $(this).val();
-    if (inputValue == "") {
-      $(this).removeClass('filled');
-      $(this).parents(formGroup).removeClass('focused');
-    } else {
-      $(this).addClass('filled');
     }
-  })
+  }
 
-})(jQuery);
+  // Expand textarea when typing
+  // Execurte: on linebreak
+  var autoExpand = function (field) {
+
+    field.style.height = 'inherit';
+
+    var computed = window.getComputedStyle(field);
+    var height = parseInt(computed.getPropertyValue('border-top-width'), 10) +
+      parseInt(computed.getPropertyValue('padding-top'), 10) +
+      field.scrollHeight +
+      parseInt(computed.getPropertyValue('padding-bottom'), 10) +
+      parseInt(computed.getPropertyValue('border-bottom-width'), 10);
+
+    field.style.height = height - 14 + 'px';
+
+  };
+
+  document.addEventListener('input', function (event) {
+    if (event.target.tagName.toLowerCase() !== 'textarea') return;
+    autoExpand(event.target);
+  }, false);
+
+  //=============================
+  //======= Not on mobile =======
+  //=============================
+
+  function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+
+  if (!isMobile()) {
+    // Scale .nav-item up and down
+    // Execute: on hover
+    let navItems = document.querySelectorAll('.nav-link, .btn-filter, .site-footer a ');
+
+    navItems.forEach((navItem) => {
+      navItem.addEventListener('mouseenter', (event) => {
+        anime({
+          targets: navItem,
+          scale: 1.2,
+          easing: 'easeOutExpo',
+          duration: 600
+        })
+      })
+      navItem.addEventListener('mouseleave', (event) => {
+        anime({
+          targets: navItem,
+          scale: 1,
+          easing: 'easeOutExpo',
+          duration: 800
+        })
+      })
+    });
+
+  }
+
+  //=============================
+  //========= JQUERY ============
+  //=============================
+
+  (function ($) {
+
+    // Animate form labels
+    // Execure on input focus
+    let formGroup = $('.wpcf7-form p');
+
+    $('.wpcf7-form-control').focus(function () {
+      $(this).parents(formGroup).addClass('focused');
+    });
+
+    $('.wpcf7-form-control').blur(function () {
+      var inputValue = $(this).val();
+      if (inputValue == "") {
+        $(this).removeClass('filled');
+        $(this).parents(formGroup).removeClass('focused');
+      } else {
+        $(this).addClass('filled');
+      }
+    })
+
+  })(jQuery);
 
 })
