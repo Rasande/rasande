@@ -1,40 +1,50 @@
 .four-zero-four {
     display: inline-block;
 }
+
 .text-biggest {
     font-size: 18vw;
 }
 
-h2, .h2 {
-    font-size:28px;
+h2,
+.h2 {
+    font-size: 28px;
+
     @include respond-above(sm) {
         font-size: 44px;
     }
 
 }
 
-h3, .h3 {
-    font-size:26px;
+h3,
+.h3 {
+    font-size: 26px;
+
     @include respond-above(sm) {
         font-size: 38px;
     }
 }
 
-h4, .h4 {
+h4,
+.h4 {
     font-size: 24px;
+
     @include respond-above(sm) {
         font-size: 33px;
     }
 }
 
-h5, .h5 {
+h5,
+.h5 {
     font-size: 22px;
+
     @include respond-above(sm) {
         font-size: 25px;
     }
 }
 
-h6, .h6 {
+h6,
+.h6 {
     font-size: 22px;
 }
 
@@ -42,9 +52,10 @@ h6, .h6 {
 .primary-color {
     color: $primary;
 }
+
 .right-25 {
-    margin: 0;
-    padding: 0;
+    padding-left: 0;
+
     @include respond-above(md) {
         margin-left: 75%;
         padding-left: 1rem;
@@ -52,17 +63,18 @@ h6, .h6 {
 }
 
 .right-50 {
-margin: 0;
-padding: 0;
-@include respond-above(md) {
-    margin-left: 50%;
-    padding-left: 1rem;
+    padding-left: 0;
 
-    }   
+    @include respond-above(md) {
+        margin-left: 50%;
+        padding-left: 1rem;
+
+    }
 }
+
 .right-75 {
-    margin: 0;
-    padding: 0;
+    padding-left: 0;
+
     @include respond-above(md) {
         margin-left: 25%;
         padding-left: 1rem;
@@ -70,24 +82,25 @@ padding: 0;
 }
 
 .left-25 {
-    margin: 0;
-    padding: 0;
+    padding-right: 0;
     @include respond-above(md) {
         margin-right: 75%;
         padding-right: 1rem;
     }
 }
+
 .left-50 {
-    margin: 0;
-    padding: 0;
+    padding-right: 0;
+
     @include respond-above(md) {
         margin-right: 50%;
         padding-right: 1rem;
     }
 }
+
 .left-75 {
-    margin: 0;
-    padding: 0;
+    padding-right: 0;
+
     @include respond-above(md) {
         margin-right: 25%;
         padding-right: 1rem;
